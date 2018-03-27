@@ -5,11 +5,11 @@
 
 **Opis teme:**
 
-	S obzirom da je naš sistem za glasanje(korišten na dosadašnjim izborima) dosta zastario s obzirom na dostupnu tehnologiju, svrha našeg sistema je automatizacija korištenja i funkcionalnosti na lokalnim ili opštim izborima u našoj zemlji.
+S obzirom da je naš sistem za glasanje(korišten na dosadašnjim izborima) dosta zastario s obzirom na dostupnu tehnologiju, svrha našeg sistema je automatizacija korištenja i funkcionalnosti na lokalnim ili opštim izborima u našoj zemlji.
 
-	U ovom slucaju, korisnikom bi se trebala smatrati država, ali i glasac, tako da u suštini problem se može, i biti ce posmatran sa dvije strane. Problem koji država ima jeste velika mogucnost malverzacije tokom izdavanja, popunjavanja, predaje i brojanja glasackih listica, dok glasacu ovaj sistem nece postati ništa teži, iako koristi tehnologiju umjesto obicnog popunjavanja glasackog listica.
+U ovom slucaju, korisnikom bi se trebala smatrati država, ali i glasac, tako da u suštini problem se može, i biti ce posmatran sa dvije strane. Problem koji država ima jeste velika mogucnost malverzacije tokom izdavanja, popunjavanja, predaje i brojanja glasackih listica, dok glasacu ovaj sistem nece postati ništa teži, iako koristi tehnologiju umjesto obicnog popunjavanja glasackog listica.
 
-	Razlozi su jasni. Upotrebom dobro razvijenog sistema za elektronsko glasanje, uveliko bi se ubrzao proces prikupljanja, brojanja i analize glasova, a uveliko umanjila mogucnost varanja. Takoder bi samo biracko mjesto bilo mnogo efikasnije zbog manjka potrebe za papirima, što podiže i ekološku osviještenost.
+Razlozi su jasni. Upotrebom dobro razvijenog sistema za elektronsko glasanje, uveliko bi se ubrzao proces prikupljanja, brojanja i analize glasova, a uveliko umanjila mogucnost varanja. Takoder bi samo biracko mjesto bilo mnogo efikasnije zbog manjka potrebe za papirima, što podiže i ekološku osviještenost.
 
 **Procesi:**
 
