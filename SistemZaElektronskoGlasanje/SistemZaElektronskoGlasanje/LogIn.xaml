@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="SistemZaElektronskoGlasanje.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SistemZaElektronskoGlasanje"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock HorizontalAlignment="Left" Margin="512,64,0,0" Text="DOBRODOSLI NA IZBORE!" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48"/>
+        <Image x:Name="GRB" HorizontalAlignment="Left" Height="384" Margin="64,64,0,0" VerticalAlignment="Top" Width="384" Source="Assets/GRB.png" Stretch="Fill"/>
+        <TextBlock HorizontalAlignment="Left" Margin="64,512,0,0" Text="UNESITE SVOJE PRISTUPNE PODATKE:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="384,576,0,0" Text="BROJ LICNE KARTE: " TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox HorizontalAlignment="Left" Margin="556,576,0,0" VerticalAlignment="Top" FontSize="18" Width="256"/>
+        <TextBlock HorizontalAlignment="Left" Margin="384,636,0,0" Text="PASSWORD: " TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox HorizontalAlignment="Left" Margin="556,636,0,0" VerticalAlignment="Top" Width="256"/>
+        <Button Content="PRISTUPI GLASANJU" HorizontalAlignment="Left" Margin="556,706,0,0" VerticalAlignment="Top" FontSize="18" Click="Button_Click"/>
+
+    </Grid>
+</Page>

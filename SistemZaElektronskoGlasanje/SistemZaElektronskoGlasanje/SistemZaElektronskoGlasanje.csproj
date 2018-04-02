@@ -95,18 +95,74 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
+    <Compile Include="KantonalneSkupstine.xaml.cs">
+      <DependentUpon>KantonalneSkupstine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KSBPK.xaml.cs">
+      <DependentUpon>KSBPK.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KSHNK.xaml.cs">
+      <DependentUpon>KSHNK.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KSK10.xaml.cs">
+      <DependentUpon>KSK10.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KSKS.xaml.cs">
+      <DependentUpon>KSKS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KSPK.xaml.cs">
+      <DependentUpon>KSPK.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KSSBK.xaml.cs">
+      <DependentUpon>KSSBK.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KSTK.xaml.cs">
+      <DependentUpon>KSTK.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KSUSK.xaml.cs">
+      <DependentUpon>KSUSK.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KSZDK.xaml.cs">
+      <DependentUpon>KSZDK.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KSZHK.xaml.cs">
+      <DependentUpon>KSZHK.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn.xaml.cs">
+      <DependentUpon>LogIn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NarodnaSkupstinaRS.xaml.cs">
+      <DependentUpon>NarodnaSkupstinaRS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PredsjednikRS.xaml.cs">
+      <DependentUpon>PredsjednikRS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PredsjednistvoBiHFBiH.xaml.cs">
+      <DependentUpon>PredsjednistvoBiHFBiH.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PredsjednistvoBiHRS.xaml.cs">
+      <DependentUpon>PredsjednistvoBiHRS.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SkupsitnaBrckoD.xaml.cs">
+      <DependentUpon>SkupsitnaBrckoD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZastupnickiDomFBiH.xaml.cs">
+      <DependentUpon>ZastupnickiDomFBiH.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZastupnickiDomParlamentaBiH.xaml.cs">
+      <DependentUpon>ZastupnickiDomParlamentaBiH.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="ClassDiagram1.cd" />
     <None Include="SistemZaElektronskoGlasanje_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\GRB.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -121,9 +177,81 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainPage.xaml">
+    <Page Include="KantonalneSkupstine.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="KSBPK.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KSHNK.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KSK10.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KSKS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KSPK.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KSSBK.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KSTK.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KSUSK.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KSZDK.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KSZHK.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LogIn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NarodnaSkupstinaRS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PredsjednikRS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PredsjednistvoBiHFBiH.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PredsjednistvoBiHRS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SkupsitnaBrckoD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ZastupnickiDomFBiH.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ZastupnickiDomParlamentaBiH.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

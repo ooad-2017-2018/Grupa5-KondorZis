@@ -1,0 +1,72 @@
+﻿<Page
+    x:Class="SistemZaElektronskoGlasanje.KSPK"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SistemZaElektronskoGlasanje"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock HorizontalAlignment="Left" Margin="64,64,0,0" Text="KANTONALNA SKUPSTINA POSAVSKOG KANTONA:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="64,112,32,0" Text="Na ovoj listi mozete glasati ili samo za jednu stranku(koaliciju) ili za jednu stranku(koaliciju) i kandidate unutar te stranke(koalicije) ili samo za kandidate unutar jedne stranke(koalicije) ili samo za jednog nezavisnog kandidata." TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="Sljedeca utrka" HorizontalAlignment="Left" Margin="1184,896,0,0" VerticalAlignment="Top" Click="Button_Click_1" Width="256" Height="64"/>
+        <RadioButton Content="Stranka(Koalicija) 1" HorizontalAlignment="Left" Margin="64,176,0,0" VerticalAlignment="Top"/>
+        <ListView HorizontalAlignment="Left" Height="256" Margin="64,220,0,0" VerticalAlignment="Top" Width="320">
+            <CheckBox Content="Kandidat 1"/>
+            <CheckBox Content="Kandidat 2"/>
+            <CheckBox Content="Kandidat 3"/>
+            <CheckBox Content="Kandidat 4"/>
+        </ListView>
+        <RadioButton Content="Stranka(Koalicija) 2" HorizontalAlignment="Left" Margin="400,176,0,0" VerticalAlignment="Top"/>
+        <ListView HorizontalAlignment="Left" Height="256" Margin="400,220,0,0" VerticalAlignment="Top" Width="320">
+            <CheckBox Content="Kandidat 1"/>
+            <CheckBox Content="Kandidat 2"/>
+            <CheckBox Content="Kandidat 3"/>
+            <CheckBox Content="Kandidat 4"/>
+        </ListView>
+        <RadioButton Content="Stranka(Koalicija) 3" HorizontalAlignment="Left" Margin="736,176,0,0" VerticalAlignment="Top"/>
+        <ListView HorizontalAlignment="Left" Height="256" Margin="736,220,0,0" VerticalAlignment="Top" Width="320">
+            <CheckBox Content="Kandidat 1"/>
+            <CheckBox Content="Kandidat 2"/>
+            <CheckBox Content="Kandidat 3"/>
+            <CheckBox Content="Kandidat 4"/>
+        </ListView>
+        <RadioButton Content="Stranka(Koalicija) 4" HorizontalAlignment="Left" Margin="1072,176,0,0" VerticalAlignment="Top"/>
+        <ListView HorizontalAlignment="Left" Height="256" Margin="1072,220,0,0" VerticalAlignment="Top" Width="320">
+            <CheckBox Content="Kandidat 1"/>
+            <CheckBox Content="Kandidat 2"/>
+            <CheckBox Content="Kandidat 3"/>
+            <CheckBox Content="Kandidat 4"/>
+        </ListView>
+        <RadioButton Content="Stranka(Koalicija) 5" HorizontalAlignment="Left" Margin="64,496,0,0" VerticalAlignment="Top"/>
+        <ListView HorizontalAlignment="Left" Height="256" Margin="64,540,0,0" VerticalAlignment="Top" Width="320">
+            <CheckBox Content="Kandidat 1"/>
+            <CheckBox Content="Kandidat 2"/>
+            <CheckBox Content="Kandidat 3"/>
+            <CheckBox Content="Kandidat 4"/>
+        </ListView>
+        <RadioButton Content="Stranka(Koalicija) 6" HorizontalAlignment="Left" Margin="400,496,0,0" VerticalAlignment="Top"/>
+        <ListView HorizontalAlignment="Left" Height="256" Margin="400,540,0,0" VerticalAlignment="Top" Width="320">
+            <CheckBox Content="Kandidat 1"/>
+            <CheckBox Content="Kandidat 2"/>
+            <CheckBox Content="Kandidat 3"/>
+            <CheckBox Content="Kandidat 4"/>
+        </ListView>
+        <RadioButton Content="Stranka(Koalicija) 6" HorizontalAlignment="Left" Margin="736,496,0,0" VerticalAlignment="Top"/>
+        <ListView HorizontalAlignment="Left" Height="256" Margin="736,540,0,0" VerticalAlignment="Top" Width="320">
+            <CheckBox Content="Kandidat 1"/>
+            <CheckBox Content="Kandidat 2"/>
+            <CheckBox Content="Kandidat 3"/>
+            <CheckBox Content="Kandidat 4"/>
+        </ListView>
+        <RadioButton Content="Stranka(Koalicija) 6" HorizontalAlignment="Left" Margin="1072,496,0,0" VerticalAlignment="Top"/>
+        <ListView HorizontalAlignment="Left" Height="256" Margin="1072,540,0,0" VerticalAlignment="Top" Width="320">
+            <CheckBox Content="Kandidat 1"/>
+            <CheckBox Content="Kandidat 2"/>
+            <CheckBox Content="Kandidat 3"/>
+            <CheckBox Content="Kandidat 4"/>
+        </ListView>
+
+    </Grid>
+</Page>
