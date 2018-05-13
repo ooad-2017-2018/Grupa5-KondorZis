@@ -34,8 +34,12 @@ namespace SistemZaElektronskoGlasanje
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(PredajaListica));
         }
 
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

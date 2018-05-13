@@ -33,7 +33,7 @@
             <CheckBox Content="Kandidat 4"/>
         </ListView>
         <RadioButton Content="Stranka(Koalicija) 4" HorizontalAlignment="Left" Margin="1072,176,0,0" VerticalAlignment="Top"/>
-        <ListView HorizontalAlignment="Left" Height="256" Margin="1072,220,0,0" VerticalAlignment="Top" Width="320">
+        <ListView HorizontalAlignment="Left" Height="256" Margin="1072,220,0,0" VerticalAlignment="Top" Width="320" SelectionChanged="ListView_SelectionChanged">
             <CheckBox Content="Kandidat 1"/>
             <CheckBox Content="Kandidat 2"/>
             <CheckBox Content="Kandidat 3"/>
