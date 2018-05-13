@@ -29,7 +29,7 @@ namespace SistemZaElektronskoGlasanje
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(PredsjednistvoBiHFBiH));
+            this.Frame.Navigate(typeof(AdminForma));
         }
     }
 }

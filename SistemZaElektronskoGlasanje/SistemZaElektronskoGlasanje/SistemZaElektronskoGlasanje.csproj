@@ -92,11 +92,14 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AdminForma.xaml.cs">
+      <DependentUpon>AdminForma.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="KantonalneSkupstine.xaml.cs">
-      <DependentUpon>KantonalneSkupstine.xaml</DependentUpon>
+    <Compile Include="GlasanjeViseKandidata.xaml.cs">
+      <DependentUpon>GlasanjeViseKandidata.xaml</DependentUpon>
     </Compile>
     <Compile Include="LogIn.xaml.cs">
       <DependentUpon>LogIn.xaml</DependentUpon>
@@ -104,10 +107,19 @@
     <Compile Include="PredajaListica.xaml.cs">
       <DependentUpon>PredajaListica.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PredsjednistvoBiHFBiH.xaml.cs">
-      <DependentUpon>PredsjednistvoBiHFBiH.xaml</DependentUpon>
+    <Compile Include="GlasanjeJedanKandidat.xaml.cs">
+      <DependentUpon>GlasanjeJedanKandidat.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpravljanjeGlasacima.xaml.cs">
+      <DependentUpon>UpravljanjeGlasacima.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpravljanjeKandidatima.xaml.cs">
+      <DependentUpon>UpravljanjeKandidatima.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpravljanjePSubjektima.xaml.cs">
+      <DependentUpon>UpravljanjePSubjektima.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -132,7 +144,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="KantonalneSkupstine.xaml">
+    <Page Include="AdminForma.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GlasanjeViseKandidata.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -144,7 +160,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PredsjednistvoBiHFBiH.xaml">
+    <Page Include="GlasanjeJedanKandidat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpravljanjeGlasacima.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpravljanjeKandidatima.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpravljanjePSubjektima.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
