@@ -9,7 +9,7 @@ namespace SistemZaElektronskoGlasanje
     class NezavisnaLista : PSubjekat
     {
         List<Kandidat> clanovi;
-        protected NezavisnaLista(string imeSubjekta) : base(imeSubjekta)
+        public NezavisnaLista(string imeSubjekta) : base(imeSubjekta)
         {
             clanovi = new List<Kandidat>();
         }

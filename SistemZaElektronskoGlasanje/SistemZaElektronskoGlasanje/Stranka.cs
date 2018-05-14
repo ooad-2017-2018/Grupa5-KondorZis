@@ -11,8 +11,9 @@ namespace SistemZaElektronskoGlasanje
         List<Kandidat> clanovi;
         Kandidat predsjednik;
         string sjediste;
-        protected Stranka(string imeSubjekta,string sjediste) : base(imeSubjekta)
+        public Stranka(string imeSubjekta,string sjediste) : base(imeSubjekta)
         {
+            clanovi = new List<Kandidat>();
             Sjediste = sjediste;
         }
 
