@@ -14,7 +14,7 @@ namespace SistemZaElektronskoGlasanje
             clanovi = new List<Kandidat>();
         }
 
-        void DodajKandidata(Kandidat k)
+        public void DodajKandidata(Kandidat k)
         {
             foreach (Kandidat kand in clanovi)
             {
@@ -23,7 +23,7 @@ namespace SistemZaElektronskoGlasanje
             clanovi.Add(k);
         }
 
-        void ObrisiKandidata(Kandidat k)
+        public void ObrisiKandidata(Kandidat k)
         {
             foreach (Kandidat kand in clanovi)
             {
