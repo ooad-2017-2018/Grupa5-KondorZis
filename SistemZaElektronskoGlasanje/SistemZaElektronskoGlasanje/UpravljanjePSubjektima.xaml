@@ -17,19 +17,20 @@
                 <RowDefinition Height="6*"/>
                 <RowDefinition Height="17*"/>
             </Grid.RowDefinitions>
-            <RadioButton Content="Stranka" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.RowSpan="2" IsChecked="True" Width="115" Grid.ColumnSpan="2" Margin="0,0,-115,-38" Height="38" Checked="RadioButton_Checked_2"/>
-            <RadioButton Content="Lista kandidata" HorizontalAlignment="Left" Margin="159,0,-326,-38" VerticalAlignment="Top" Width="167" Checked="RadioButton_Checked_1" Height="38" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+            <RadioButton Name="strankarb" Content="Stranka" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.RowSpan="2" IsChecked="True" Width="115" Grid.ColumnSpan="2" Margin="0,0,-115,-38" Height="38" Checked="RadioButton_Checked_2"/>
+            <RadioButton Name="listarb" Content="Lista kandidata" HorizontalAlignment="Left" Margin="159,0,-326,-38" VerticalAlignment="Top" Width="167" Checked="RadioButton_Checked_1" Height="38" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
         </Grid>
         <TextBlock HorizontalAlignment="Left" Margin="52,48,0,0" Text="Dodavanje političkog subjekta" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <Button Content="Nazad" HorizontalAlignment="Left" Margin="47,354,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <Button Content="Prihvati" HorizontalAlignment="Left" Margin="194,354,0,0" VerticalAlignment="Top"/>
+        <Button Content="Prihvati" HorizontalAlignment="Left" Margin="194,354,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
         <TextBlock HorizontalAlignment="Left" Margin="52,164,0,0" Text="Naziv političkog subjekta" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="52,202,0,0" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.571,0.25" Width="212"/>
+        <TextBox Name="Ime"  HorizontalAlignment="Left" Margin="52,202,0,0" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.571,0.25" Width="212"/>
         <TextBlock HorizontalAlignment="Left" Margin="52,265,0,0" Text="Sjedište stranke" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBox Name="Sjediste" HorizontalAlignment="Left" Margin="52,303,0,0" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.571,0.25" Width="212"/>
         <TextBlock HorizontalAlignment="Left" Margin="582,48,0,0" Text="Brisanje subjekta" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="582,95,0,0" Text="Naziv subjekta:" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Margin="704,95,0,0" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.571,0.25" Width="282"/>
         <Button Content="Obriši" HorizontalAlignment="Left" Margin="927,156,0,0" VerticalAlignment="Top"/>
+        <TextBlock Name="Greska" Foreground="Red" HorizontalAlignment="Left" Margin="52,407,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="580"/>
     </Grid>
 </Page>

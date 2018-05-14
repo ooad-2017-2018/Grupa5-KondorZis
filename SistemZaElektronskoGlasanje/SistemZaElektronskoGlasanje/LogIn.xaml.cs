@@ -22,14 +22,16 @@ namespace SistemZaElektronskoGlasanje
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        Izbori izbori;
         public MainPage()
         {
+            izbori = new Izbori();
             this.InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(PassGEN));
+            this.Frame.Navigate(typeof(AdminForma),izbori);
         }
     }
 }

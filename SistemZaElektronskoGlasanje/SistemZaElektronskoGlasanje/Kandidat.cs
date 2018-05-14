@@ -25,6 +25,6 @@ namespace SistemZaElektronskoGlasanje
         public string Prezime { get => prezime; set => prezime = value; }
         public string Mjesto_stanovanja { get => mjesto_stanovanja; set => mjesto_stanovanja = value; }
         public long JMBG { get => jmbg; set => jmbg = value; }
-        private Nacionalnost N { get => n; set => n = value; }
+        public Nacionalnost N { get => n; set => n = value; }
     }
 }

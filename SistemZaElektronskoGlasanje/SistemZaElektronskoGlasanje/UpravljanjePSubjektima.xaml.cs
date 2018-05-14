@@ -23,12 +23,18 @@ namespace SistemZaElektronskoGlasanje
     public sealed partial class UpravljanjePSubjektima : Page
     {
         bool a;
+        Izbori izbori;
         public UpravljanjePSubjektima()
         {
             this.InitializeComponent();
             a = false;
         }
-        
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            izbori = (Izbori)e.Parameter;
+        }
+
         private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
         {
             Sjediste.IsEnabled = false;
@@ -44,6 +50,34 @@ namespace SistemZaElektronskoGlasanje
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.GoBack();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if(Ime.Text=="")
+            {
+                Greska.Text = "NISTE UNIJELI IME POLITIČKOG SUBJEKTA";
+            }
+            else if(Sjediste.Text=="" && strankarb.IsChecked==true)
+            {
+                Greska.Text = "NISTE UNIJELI SJEDIŠTE STRANKE";
+            }
+            else
+            {
+                Greska.Text = "";
+                try
+                {
+                    if (strankarb.IsChecked == true)
+                        izbori.DodajStranku(Ime.Text, Sjediste.Text);
+                    else
+                        izbori.DodajNListu(Ime.Text);
+                        
+                }
+                catch(Exception eks)
+                {
+                    Greska.Text = eks.Message;
+                }
+            }
         }
     }
 }

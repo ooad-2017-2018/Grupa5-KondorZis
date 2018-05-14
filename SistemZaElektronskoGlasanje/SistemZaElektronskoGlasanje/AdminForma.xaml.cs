@@ -20,26 +20,34 @@ namespace SistemZaElektronskoGlasanje
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
+    ///
     public sealed partial class AdminForma : Page
     {
+        Izbori izbori;
         public AdminForma()
         {
             this.InitializeComponent();
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            izbori = (Izbori)e.Parameter;
+
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(UpravljanjePSubjektima));
+            this.Frame.Navigate(typeof(UpravljanjePSubjektima),izbori);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(UpravljanjeKandidatima));
+            this.Frame.Navigate(typeof(UpravljanjeKandidatima), izbori);
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(UpravljanjeGlasacima));
+            this.Frame.Navigate(typeof(UpravljanjeGlasacima), izbori);
         }
     }
 }

@@ -14,5 +14,9 @@ namespace SistemZaElektronskoGlasanje
             ImeSubjekta = imeSubjekta;
         }
         public string ImeSubjekta { get => imeSubjekta; set => imeSubjekta = value; }
+        public override string ToString()
+        {
+            return imeSubjekta;
+        }
     }
 }
