@@ -28,8 +28,12 @@ namespace SistemZaElektronskoGlasanje
             foreach (Kandidat kand in clanovi)
             {
                 if (k.JMBG == kand.JMBG)
+                {
                     clanovi.Remove(kand);
+                    return;
+                }
             }
+            throw new Exception(k.Ime + " " + k.Prezime + " nije u " + this.ImeSubjekta);
         }
     }
 }

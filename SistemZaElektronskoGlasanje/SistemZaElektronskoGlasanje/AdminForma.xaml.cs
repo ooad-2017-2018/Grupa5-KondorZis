@@ -49,5 +49,10 @@ namespace SistemZaElektronskoGlasanje
         {
             this.Frame.Navigate(typeof(UpravljanjeGlasacima), izbori);
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            this.Frame.GoBack();
+        }
     }
 }

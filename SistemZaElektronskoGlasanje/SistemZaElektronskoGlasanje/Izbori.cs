@@ -30,7 +30,11 @@ namespace SistemZaElektronskoGlasanje
         public void IzbrisiKandidata(Int64 jmbg)
         {
             foreach (Kandidat k in Kandidati)
-                if (k.JMBG == jmbg) Kandidati.Remove(k);
+                if (k.JMBG == jmbg)
+                {
+                    Kandidati.Remove(k);
+                    return;
+                }
         }
 
         public void DodajStranku(string imeSubjekta, string sjediste)
@@ -94,20 +98,19 @@ namespace SistemZaElektronskoGlasanje
 
         public void IzbaciClana(Kandidat k)
         {
-            foreach (PSubjekat ps in Subjekti)
+            foreach (PSubjekat ps in subjekti)
             {
                 try
-                {
+                {               
                     if (ps is Stranka)
                         (ps as Stranka).ObrisiKandidata(k);
                     else (ps as NezavisnaLista).ObrisiKandidata(k);
-                    return;
                 }
                 catch(Exception)
                 {
+
                 }
             }
-            throw new Exception(k.Ime + " " + k.Prezime + " nije u sistemu.");
         }
 
         public NezavisnaLista DajNListu(string ime)

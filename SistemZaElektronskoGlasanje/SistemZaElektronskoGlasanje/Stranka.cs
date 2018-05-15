@@ -39,8 +39,10 @@ namespace SistemZaElektronskoGlasanje
                         throw new Exception("Ne može se predsjednik izbaciti iz stranke");
                     else
                         clanovi.Remove(kand);
+                    return;
                 }
             }
+            throw new Exception(k.Ime + " " + k.Prezime + " nije u "+ this.ImeSubjekta);
         }
     }
 }

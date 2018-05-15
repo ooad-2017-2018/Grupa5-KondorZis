@@ -58,7 +58,7 @@ namespace SistemZaElektronskoGlasanje
             {
                 Greska.Text = "NISTE UNIJELI IME POLITIČKOG SUBJEKTA";
             }
-            else if(Sjediste.Text=="" && strankarb.IsChecked==true)
+            else if(Sjediste.Text=="" && strankarb.IsChecked.Value)
             {
                 Greska.Text = "NISTE UNIJELI SJEDIŠTE STRANKE";
             }
@@ -71,6 +71,8 @@ namespace SistemZaElektronskoGlasanje
                         izbori.DodajStranku(Ime.Text, Sjediste.Text);
                     else
                         izbori.DodajNListu(Ime.Text);
+                    Ime.Text = "";
+                    Sjediste.Text = "";
                         
                 }
                 catch(Exception eks)

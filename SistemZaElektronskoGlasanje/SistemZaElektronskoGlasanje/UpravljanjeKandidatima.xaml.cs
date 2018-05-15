@@ -25,19 +25,22 @@ namespace SistemZaElektronskoGlasanje
         Izbori izbori;
         public UpravljanjeKandidatima()
         {
+            Random b = new Random();
             this.InitializeComponent();
             Nacionalnost.Items.Add("Bošnjak");
             Nacionalnost.Items.Add("Hrvat");
             Nacionalnost.Items.Add("Srbin");
             Nacionalnost.Items.Add("Ostali");
-            Nacionalnost.SelectedIndex = 0;
+            Nacionalnost.SelectedIndex = (b.Next()%4) ;
             Subjekat.Items.Add("");
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             izbori = (Izbori)e.Parameter;
             foreach (PSubjekat ps in izbori.Subjekti)
+            {
                 Subjekat.Items.Add(ps);
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -85,7 +88,7 @@ namespace SistemZaElektronskoGlasanje
                 try
                 {
                     Greska.Text = "";
-                    izbori.DodajKandidata(Ime.Text,Prezime.Text,MStanovanja.Text,jmb,(Nacionalnost.SelectedIndex==0 ? Kandidat.Nacionalnost.Bosnjak : Nacionalnost.SelectedIndex == 1 ? Kandidat.Nacionalnost.Hrvat : Nacionalnost.SelectedIndex==2 ?Kandidat.Nacionalnost.Srbin :Kandidat.Nacionalnost.Ostali));
+                    izbori.DodajKandidata(Ime.Text,Prezime.Text,MStanovanja.Text,jmb,(Nacionalnost.SelectedIndex==0 ? Kandidat.Nacionalnost.Bosnjak : Nacionalnost.SelectedIndex == 1 ? Kandidat.Nacionalnost.Hrvat : Nacionalnost.SelectedIndex==2 ? Kandidat.Nacionalnost.Srbin :Kandidat.Nacionalnost.Ostali));
                     Kandidat k = izbori.DajKandidata(jmb);
                     if(Subjekat.SelectedItem is Stranka)
                     {
@@ -100,7 +103,6 @@ namespace SistemZaElektronskoGlasanje
                     Prezime.Text = "";
                     MStanovanja.Text = "";
                     Jmbg.Text = "";
-                    Subjekat.SelectedIndex = 0;
                 }
                 catch(Exception eks)
                 {
@@ -108,6 +110,32 @@ namespace SistemZaElektronskoGlasanje
                 }
             }
 
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Int64 jmb;
+            if (!Int64.TryParse(bIme.Text, out jmb))
+            {
+                bGreska.Text = "POGREŠAN JMBG";
+            }
+            else if (jmb < 1000000000000 || jmb > 9999999999999)
+            {
+                bGreska.Text = "POGREŠAN JMBG";
+            }
+            else
+            {
+               // try
+                {
+                    Kandidat brisanje = izbori.DajKandidata(jmb);
+                    izbori.IzbaciClana(brisanje);
+                    izbori.IzbrisiKandidata(jmb);
+                }/*
+                catch(Exception eks)
+                {
+                    bGreska.Text = eks.Message;
+                }*/
+            }
         }
     }
 }
