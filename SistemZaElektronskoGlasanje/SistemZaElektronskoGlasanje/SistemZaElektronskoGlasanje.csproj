@@ -99,6 +99,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="ClanKomisije.cs" />
+    <Compile Include="Glasac.cs" />
     <Compile Include="GlasanjeViseKandidata.xaml.cs">
       <DependentUpon>GlasanjeViseKandidata.xaml</DependentUpon>
     </Compile>
@@ -110,9 +111,6 @@
     <Compile Include="Nacionalnost.cs" />
     <Compile Include="NezavisnaLista.cs" />
     <Compile Include="Ovlastenja.cs" />
-    <Compile Include="PassGEN.xaml.cs">
-      <DependentUpon>PassGEN.xaml</DependentUpon>
-    </Compile>
     <Compile Include="PredajaListica.xaml.cs">
       <DependentUpon>PredajaListica.xaml</DependentUpon>
     </Compile>
@@ -166,10 +164,6 @@
     <Page Include="LogIn.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="PassGEN.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PredajaListica.xaml">
       <SubType>Designer</SubType>
