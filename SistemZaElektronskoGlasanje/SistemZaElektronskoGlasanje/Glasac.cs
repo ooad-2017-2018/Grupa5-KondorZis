@@ -14,7 +14,6 @@ namespace SistemZaElektronskoGlasanje
         private String brLicneKarte;
         private String mjestoStanovanja;
         private String sifraZaGlasanje;
-        private static Random random = new Random();
         public Glasac() { }
         public Glasac(String _ime, String _prezime, Int64 _jmbg, String _brLicneKarte, String _mjestoStanovanja, String _sifraZaGlasanje)
         {
@@ -25,8 +24,9 @@ namespace SistemZaElektronskoGlasanje
             this.brLicneKarte = _brLicneKarte;
             this.sifraZaGlasanje = _sifraZaGlasanje;
         }
-        public static string genPass()
+        public string genPass()
         {
+            Random random = new Random(Int32.Parse((jmbg% 1000000000).ToString()));
             const string chars = "_-.abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             return new string(Enumerable.Repeat(chars, 8).Select(s => s[random.Next(s.Length)]).ToArray());
         }
