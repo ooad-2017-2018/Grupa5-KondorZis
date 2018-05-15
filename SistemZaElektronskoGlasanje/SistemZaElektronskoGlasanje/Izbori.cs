@@ -10,14 +10,70 @@ namespace SistemZaElektronskoGlasanje
     {
         List<PSubjekat> subjekti;
         List<Kandidat> kandidati;
+        List<Glasac> glasaci;
+        List<ClanKomisije> komisija;
 
         public List<PSubjekat> Subjekti { get => subjekti; set => subjekti = value; }
         public List<Kandidat> Kandidati { get => kandidati; set => kandidati = value; }
+        public List<Glasac> Glasaci { get => glasaci; set => glasaci = value; }
+        public List<ClanKomisije> Komisija { get => komisija; set => komisija = value; }
 
         public Izbori()
         {
-            this.Subjekti = new List<PSubjekat>();
-            this.Kandidati = new List<Kandidat>();
+            Subjekti = new List<PSubjekat>();
+            Kandidati = new List<Kandidat>();
+            Glasaci = new List<Glasac>();
+            Komisija = new List<ClanKomisije>();
+        }
+
+        public void DodajClana(ClanKomisije ck)
+        {
+            foreach (ClanKomisije clankom in komisija)
+                if (ck.Jmbg == clankom.Jmbg) throw new Exception("Glasač je već unesen");
+            Komisija.Add(ck);
+        }
+
+        public void ObrisiClana(ClanKomisije ck)
+        {
+            foreach (ClanKomisije clankom in komisija)
+                if (ck.Jmbg == clankom.Jmbg)
+                {
+                    Komisija.Remove(ck);
+                    return;
+                }
+        }
+
+        public ClanKomisije DajClana(string username)
+        {
+            foreach (ClanKomisije clankom in komisija)
+                if (username == clankom.Username())
+                    return clankom;
+            throw new Exception("Pogrešan username");
+        }
+
+        public void DodajGLasaca(Glasac g)
+        {
+            foreach (Glasac glasac in glasaci)
+                if (g.Jmbg == glasac.Jmbg) throw new Exception("Glasač je već unesen");
+            Glasaci.Add(g);
+        }
+
+        public void ObrisiGlasaca(Glasac g)
+        {
+            foreach (Glasac glasac in glasaci)
+                if (g.Jmbg == glasac.Jmbg)
+                {
+                    Glasaci.Remove(glasac);
+                    return;
+                }
+        }
+
+        public Glasac DajGlasaca(Int64 jmbg)
+        {
+            foreach (Glasac glasac in glasaci)
+                if (jmbg == glasac.Jmbg)
+                    return glasac;
+            throw new Exception("Glasač nije u sistemu");
         }
 
         public void DodajKandidata(string ime, string prezime, string mjesto_stanovanja, Int64 jmbg, Kandidat.Nacionalnost n)
@@ -126,7 +182,11 @@ namespace SistemZaElektronskoGlasanje
         public void IzbrisiSubjekta(string ime)
         {
             foreach (PSubjekat ps in Subjekti)
-                if (ps.ImeSubjekta == ime) Subjekti.Remove(ps);
+                if (ps.ImeSubjekta == ime)
+                {
+                    Subjekti.Remove(ps);
+                    return;
+                }
         }
     }
 }

@@ -20,7 +20,10 @@ namespace SistemZaElektronskoGlasanje
             Password = password;
             Ovlasti = ovlasti;
         }
-
+        public string Username()
+        {
+            return (Ime.Substring(0, 1) + Prezime).ToLower();
+        }
         public string Ime { get => ime; set => ime = value; }
         public string Prezime { get => prezime; set => prezime = value; }
         public string Password { get => password; set => password = value; }

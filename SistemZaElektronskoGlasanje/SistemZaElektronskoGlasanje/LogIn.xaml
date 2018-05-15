@@ -7,15 +7,16 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" HorizontalAlignment="Stretch" Margin="0,0,-198,-162" VerticalAlignment="Stretch">
         <TextBlock HorizontalAlignment="Left" Margin="512,64,0,0" Text="ADMIN PANEL" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48"/>
         <Image x:Name="GRB" HorizontalAlignment="Left" Height="384" Margin="64,64,0,0" VerticalAlignment="Top" Width="384" Source="Assets/GRB.png" Stretch="Fill"/>
         <TextBlock HorizontalAlignment="Left" Margin="64,512,0,0" Text="UNESITE SVOJE PRISTUPNE PODATKE:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24"/>
         <TextBlock HorizontalAlignment="Left" Margin="384,576,0,0" Text="USERNAME: " TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
-        <TextBox HorizontalAlignment="Left" Margin="556,576,0,0" VerticalAlignment="Top" FontSize="18" Width="256"/>
+        <TextBox Name="User" HorizontalAlignment="Left" Margin="556,576,0,0" VerticalAlignment="Top" FontSize="18" Width="256"/>
         <TextBlock HorizontalAlignment="Left" Margin="384,636,0,0" Text="PASSWORD: " TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
-        <TextBox HorizontalAlignment="Left" Margin="556,636,0,0" VerticalAlignment="Top" Width="256"/>
+        <TextBox Name="Pass" HorizontalAlignment="Left" Margin="556,636,0,0" VerticalAlignment="Top" Width="256"/>
         <Button Content="PRISTUPI PANELU" HorizontalAlignment="Left" Margin="556,706,0,0" VerticalAlignment="Top" FontSize="18" Click="Button_Click"/>
+        <TextBlock Name="Greska" Foreground="Red" HorizontalAlignment="Left" Margin="384,786,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="626"/>
 
     </Grid>
 </Page>
