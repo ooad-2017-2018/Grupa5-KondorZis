@@ -9,22 +9,25 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <TextBlock HorizontalAlignment="Left" Margin="52,48,0,0" Text="Dodavanje glasača" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Button Content="Nazad" HorizontalAlignment="Left" Margin="47,354,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <Button Content="Prihvati" HorizontalAlignment="Left" Margin="194,354,0,0" VerticalAlignment="Top"/>
+        <Button Content="Nazad" HorizontalAlignment="Left" Margin="47,405,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button Content="Prihvati" HorizontalAlignment="Left" Margin="194,405,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
         <TextBlock HorizontalAlignment="Left" Margin="52,95,0,0" Text="Ime:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="194,95,0,0" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.571,0.25" Width="282"/>
-        <TextBlock HorizontalAlignment="Left" Margin="52,146,0,0" Text="Prezime:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="194,146,0,0" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.571,0.25" Width="282"/>
-        <TextBlock HorizontalAlignment="Left" Margin="52,203,0,0" Text="JMBG:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="194,203,0,0" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.571,0.25" Width="282"/>
-        <TextBlock HorizontalAlignment="Left" Margin="52,254,0,0" Text="Mjesto stanovanja:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="194,254,0,0" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.571,0.25" Width="282"/>
-        <TextBlock HorizontalAlignment="Left" Margin="52,304,0,0" Text="Broj lične karte:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="194,304,0,0" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.571,0.25" Width="282"/>
+        <TextBox Name="Ime" HorizontalAlignment="Left" Margin="194,95,0,0" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.571,0.25" Width="282"/>
+        <TextBlock HorizontalAlignment="Left" Margin="51,152,0,0" Text="Prezime:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Name="Prezime" HorizontalAlignment="Left" Margin="196,146,0,0" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.571,0.25" Width="282"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52,209,0,0" Text="JMBG:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Name="Jmbg" HorizontalAlignment="Left" Margin="194,203,0,0" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.571,0.25" Width="282"/>
+        <TextBlock HorizontalAlignment="Left" Margin="47,260,0,0" Text="Mjesto stanovanja:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Name="MStanovnja" HorizontalAlignment="Left" Margin="194,254,0,0" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.571,0.25" Width="282"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52,310,0,0" Text="Broj lične karte:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Name="LKarta" HorizontalAlignment="Left" Margin="194,304,0,0" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.571,0.25" Width="282"/>
         <TextBlock HorizontalAlignment="Left" Margin="582,48,0,0" Text="Brisanje glasača" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="582,95,0,0" Text="Broj lične karte:" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Margin="704,95,0,0" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.571,0.25" Width="282"/>
         <Button Content="Obriši" HorizontalAlignment="Left" Margin="927,156,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52,366,0,0" Text="Glasačko mjesto:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="197,361,0,0" VerticalAlignment="Top" Width="279" Name="Mjesto"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52,476,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="424" Name="Greska" Foreground="Red"/>
 
     </Grid>
 </Page>

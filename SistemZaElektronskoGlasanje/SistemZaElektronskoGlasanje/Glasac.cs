@@ -13,7 +13,6 @@ namespace SistemZaElektronskoGlasanje
         private Int64 jmbg;
         private String brLicneKarte;
         private String mjestoStanovanja;
-        private String sifraZaGlasanje;
         private static Random random = new Random();
 
         public string Ime { get => ime; set => ime = value; }
@@ -21,16 +20,14 @@ namespace SistemZaElektronskoGlasanje
         public long Jmbg { get => jmbg; set => jmbg = (value < 1000000000000 || value > 9999999999999) ? throw new Exception("Pogrešan JMBG") : value; }
         public string BrLicneKarte { get => brLicneKarte; set => brLicneKarte = value; }
         public string MjestoStanovanja { get => mjestoStanovanja; set => mjestoStanovanja = value; }
-        public string SifraZaGlasanje { get => sifraZaGlasanje; set => sifraZaGlasanje = value; }
         
-        public Glasac(string ime, string prezime, long jmbg, string brLicneKarte, string mjestoStanovanja, string sifraZaGlasanje)
+        public Glasac(string ime, string prezime, long jmbg, string brLicneKarte, string mjestoStanovanja)
         {
             Ime = ime;
             Prezime = prezime;
             Jmbg = jmbg;
             BrLicneKarte = brLicneKarte;
             MjestoStanovanja = mjestoStanovanja;
-            SifraZaGlasanje = sifraZaGlasanje;
         }
         public string genPass()
         {

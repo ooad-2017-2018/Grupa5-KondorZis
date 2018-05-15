@@ -73,7 +73,7 @@ namespace SistemZaElektronskoGlasanje
                         izbori.DodajNListu(Ime.Text);
                     Ime.Text = "";
                     Sjediste.Text = "";
-                        
+                    Greska.Text = "";
                 }
                 catch(Exception eks)
                 {

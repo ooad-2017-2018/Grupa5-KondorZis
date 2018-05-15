@@ -14,10 +14,13 @@ namespace SistemZaElektronskoGlasanje
         private List<GlasackiListic> predatiGlasList;
         private static TimeSpan vrijemeIzmedjuAutoPredaje = new TimeSpan(1, 0, 0);
         private TimeSpan vrijemeProslePredaje;
+
+        public string LokacijaMjesta { get => lokacijaMjesta; set => lokacijaMjesta = value; }
+
         //public GlasackoMjesto() { }
         public GlasackoMjesto(String _lokacijaMjesta)
         {
-            this.lokacijaMjesta = _lokacijaMjesta;
+            this.LokacijaMjesta = _lokacijaMjesta;
             listaRegGlasaca = new List<Glasac>();
             listaClanovaKom = new List<ClanKomisije>();
             predatiGlasList = new List<GlasackiListic>();
@@ -58,6 +61,11 @@ namespace SistemZaElektronskoGlasanje
         public void BrisiClanaKomisije(ClanKomisije clan)
         {
             throw new NotImplementedException(); //Napisati pa testirati brisanje
+        }
+
+        public override string ToString()
+        {
+            return this.lokacijaMjesta;
         }
     }
 }

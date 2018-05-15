@@ -14,7 +14,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="384,576,0,0" Text="USERNAME: " TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
         <TextBox Name="User" HorizontalAlignment="Left" Margin="556,576,0,0" VerticalAlignment="Top" FontSize="18" Width="256"/>
         <TextBlock HorizontalAlignment="Left" Margin="384,636,0,0" Text="PASSWORD: " TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18"/>
-        <TextBox Name="Pass" HorizontalAlignment="Left" Margin="556,636,0,0" VerticalAlignment="Top" Width="256"/>
+        <PasswordBox Name="Pass" HorizontalAlignment="Left" Margin="556,636,0,0" VerticalAlignment="Top" Width="256"/>
         <Button Content="PRISTUPI PANELU" HorizontalAlignment="Left" Margin="556,706,0,0" VerticalAlignment="Top" FontSize="18" Click="Button_Click"/>
         <TextBlock Name="Greska" Foreground="Red" HorizontalAlignment="Left" Margin="384,786,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="626"/>
 

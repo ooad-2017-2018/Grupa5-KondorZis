@@ -103,6 +103,7 @@ namespace SistemZaElektronskoGlasanje
                     Prezime.Text = "";
                     MStanovanja.Text = "";
                     Jmbg.Text = "";
+                    Greska.Text = "";
                 }
                 catch(Exception eks)
                 {

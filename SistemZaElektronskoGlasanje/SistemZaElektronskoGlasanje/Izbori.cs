@@ -12,11 +12,13 @@ namespace SistemZaElektronskoGlasanje
         List<Kandidat> kandidati;
         List<Glasac> glasaci;
         List<ClanKomisije> komisija;
+        List<GlasackoMjesto> gMjesta;
 
         public List<PSubjekat> Subjekti { get => subjekti; set => subjekti = value; }
         public List<Kandidat> Kandidati { get => kandidati; set => kandidati = value; }
         public List<Glasac> Glasaci { get => glasaci; set => glasaci = value; }
         public List<ClanKomisije> Komisija { get => komisija; set => komisija = value; }
+        public List<GlasackoMjesto> GMjesta { get => gMjesta; set => gMjesta = value; }
 
         public Izbori()
         {
@@ -24,7 +26,17 @@ namespace SistemZaElektronskoGlasanje
             Kandidati = new List<Kandidat>();
             Glasaci = new List<Glasac>();
             Komisija = new List<ClanKomisije>();
+            GMjesta = new List<GlasackoMjesto>();
         }
+
+        public void DodajGMjesto(GlasackoMjesto gm)
+        {
+            foreach (GlasackoMjesto glasmj in GMjesta)
+                if (glasmj.LokacijaMjesta==gm.LokacijaMjesta) throw new Exception("Glasačko mjesto je već uneseno");
+            GMjesta.Add(gm);
+        }
+
+
 
         public void DodajClana(ClanKomisije ck)
         {
@@ -51,10 +63,18 @@ namespace SistemZaElektronskoGlasanje
             throw new Exception("Pogrešan username");
         }
 
-        public void DodajGLasaca(Glasac g)
+        public void DodajGLasaca(Glasac g,GlasackoMjesto gm)
         {
             foreach (Glasac glasac in glasaci)
                 if (g.Jmbg == glasac.Jmbg) throw new Exception("Glasač je već unesen");
+            foreach (GlasackoMjesto glasmj in GMjesta)
+                if (glasmj.LokacijaMjesta == gm.LokacijaMjesta)
+                {
+                    gm.DodajNovogGlasaca(g);
+                    goto nastavak;
+                }
+            throw new Exception("Glasačko mjesto je ne postoji");
+            nastavak:
             Glasaci.Add(g);
         }
 

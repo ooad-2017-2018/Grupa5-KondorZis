@@ -28,6 +28,7 @@ namespace SistemZaElektronskoGlasanje
             izbori = new Izbori();
             izbori.DodajClana(new ClanKomisije("Kenan","Karahodzic",2502998170039,"password",ClanKomisije.Ovlastenja.Nadgledanje));
             izbori.DodajClana(new ClanKomisije("Damad", "Butkovic", 1234567890123, "password", ClanKomisije.Ovlastenja.Upravljanje));
+            izbori.DodajGMjesto(new GlasackoMjesto("Staro Hrasno"));
             this.InitializeComponent();
         }
 
@@ -36,7 +37,7 @@ namespace SistemZaElektronskoGlasanje
             try
             {
                 ClanKomisije korisnik = izbori.DajClana(User.Text);
-                if (korisnik.Password != Pass.Text)
+                if (korisnik.Password != Pass.Password)
                     Greska.Text = "Pogrešan password";
                 else
                 {
