@@ -125,16 +125,16 @@ namespace SistemZaElektronskoGlasanje
             }
             else
             {
-               // try
+                try
                 {
                     Kandidat brisanje = izbori.DajKandidata(jmb);
                     izbori.IzbaciClana(brisanje);
                     izbori.IzbrisiKandidata(jmb);
-                }/*
+                }
                 catch(Exception eks)
                 {
                     bGreska.Text = eks.Message;
-                }*/
+                }
             }
         }
     }
