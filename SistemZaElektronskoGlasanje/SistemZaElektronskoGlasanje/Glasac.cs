@@ -15,16 +15,26 @@ namespace SistemZaElektronskoGlasanje
         private String mjestoStanovanja;
         private String sifraZaGlasanje;
         private static Random random = new Random();
+
+        public string Ime { get => ime; set => ime = value; }
+        public string Prezime { get => prezime; set => prezime = value; }
+        public long Jmbg { get => jmbg; set => jmbg = (value < 1000000000000 || value > 9999999999999) ? throw new Exception("Pogrešan JMBG") : value; }
+        public string BrLicneKarte { get => brLicneKarte; set => brLicneKarte = value; }
+        public string MjestoStanovanja { get => mjestoStanovanja; set => mjestoStanovanja = value; }
+        public string SifraZaGlasanje { get => sifraZaGlasanje; set => sifraZaGlasanje = value; }
+
         public Glasac() { }
-        public Glasac(String _ime, String _prezime, Int64 _jmbg, String _brLicneKarte, String _mjestoStanovanja, String _sifraZaGlasanje)
+
+        public Glasac(string ime, string prezime, long jmbg, string brLicneKarte, string mjestoStanovanja, string sifraZaGlasanje)
         {
-            this.ime = _ime;
-            this.prezime = _prezime;
-            this.jmbg = _jmbg;
-            this.mjestoStanovanja = _mjestoStanovanja;
-            this.brLicneKarte = _brLicneKarte;
-            this.sifraZaGlasanje = _sifraZaGlasanje;
+            Ime = ime;
+            Prezime = prezime;
+            Jmbg = jmbg;
+            BrLicneKarte = brLicneKarte;
+            MjestoStanovanja = mjestoStanovanja;
+            SifraZaGlasanje = sifraZaGlasanje;
         }
+
         public static string genPass()
         {
             const string chars = "_-.abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";

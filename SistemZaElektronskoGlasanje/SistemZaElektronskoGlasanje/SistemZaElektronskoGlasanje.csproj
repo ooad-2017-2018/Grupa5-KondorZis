@@ -100,6 +100,8 @@
     </Compile>
     <Compile Include="ClanKomisije.cs" />
     <Compile Include="Glasac.cs" />
+    <Compile Include="GlasackiListic.cs" />
+    <Compile Include="GlasackoMjesto.cs" />
     <Compile Include="GlasanjeViseKandidata.xaml.cs">
       <DependentUpon>GlasanjeViseKandidata.xaml</DependentUpon>
     </Compile>
