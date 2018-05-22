@@ -98,5 +98,30 @@ namespace SistemZaElektronskoGlasanje
                 }
             }
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if(bLKarta.Text=="")
+                {
+                    bGreska.Text = "Unesite broj lične karte za brisanje";
+                    return;
+                }
+                if(bLKarta.Text.Count()!=9)
+                {
+                    bGreska.Text = "Neispravan broj lične karte";
+                    return;
+                }
+                Glasac g = izbori.DajGlasaca(bLKarta.Text);
+                izbori.ObrisiGlasaca(g);
+                bLKarta.Text = "";
+                bGreska.Text = "";
+            }
+            catch(Exception eks)
+            {
+                bGreska.Text = eks.Message;
+            }
+        }
     }
 }

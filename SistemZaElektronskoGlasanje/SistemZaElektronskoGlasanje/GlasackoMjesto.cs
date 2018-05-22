@@ -16,12 +16,13 @@ namespace SistemZaElektronskoGlasanje
         private TimeSpan vrijemeProslePredaje;
 
         public string LokacijaMjesta { get => lokacijaMjesta; set => lokacijaMjesta = value; }
+        public List<Glasac> ListaRegGlasaca { get => listaRegGlasaca; set => listaRegGlasaca = value; }
 
         //public GlasackoMjesto() { }
         public GlasackoMjesto(String _lokacijaMjesta)
         {
             this.LokacijaMjesta = _lokacijaMjesta;
-            listaRegGlasaca = new List<Glasac>();
+            ListaRegGlasaca = new List<Glasac>();
             listaClanovaKom = new List<ClanKomisije>();
             predatiGlasList = new List<GlasackiListic>();
             vrijemeProslePredaje = DateTime.Now.TimeOfDay;
@@ -42,8 +43,8 @@ namespace SistemZaElektronskoGlasanje
         }
         public void DodajNovogGlasaca(Glasac novi)
         {
-            foreach (Glasac g in listaRegGlasaca) if (g.Jmbg == novi.Jmbg) throw new Exception("Glasac je vec registrovan na ovom glasackom mjestu");
-            listaRegGlasaca.Add(novi); //Keno ce dodati verifikaciju za sva glasacka mjesta
+            foreach (Glasac g in ListaRegGlasaca) if (g.Jmbg == novi.Jmbg) throw new Exception("Glasac je vec registrovan na ovom glasackom mjestu");
+            ListaRegGlasaca.Add(novi); //Keno ce dodati verifikaciju za sva glasacka mjesta
         }
         public void DodajGlasackiListic(GlasackiListic listic)
         {
