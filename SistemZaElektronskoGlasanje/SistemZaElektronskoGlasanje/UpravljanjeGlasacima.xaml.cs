@@ -43,25 +43,26 @@ namespace SistemZaElektronskoGlasanje
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Int64 jmb;
-            if(Ime.Text =="")
+            bGreska.Text = "";
+            if (Ime.Text =="")
             {
                 Greska.Text = "UNESITE IME";
             }
             else if(Prezime.Text=="")
             {
-                Greska.Text = "UNESTIE PREZIME";
+                Greska.Text = "UNESITE PREZIME";
             }
             else if(Jmbg.Text=="")
             {
-                Greska.Text = "UNESTIE JMBG";
+                Greska.Text = "UNESITE JMBG";
             }
             else if (MStanovnja.Text == "")
             {
-                Greska.Text = "UNESTIE MJESTO STANOVANJA";
+                Greska.Text = "UNESITE MJESTO STANOVANJA";
             }
             else if (LKarta.Text == "")
             {
-                Greska.Text = "UNESTIE BROJ LIČNE KARTE";
+                Greska.Text = "UNESITE BROJ LIČNE KARTE";
             }
             else if(LKarta.Text.Length!=9)
             {
@@ -90,7 +91,7 @@ namespace SistemZaElektronskoGlasanje
                     LKarta.Text = "";
                     Jmbg.Text = "";
                     MStanovnja.Text = "";
-                    Greska.Text = "";
+                    Greska.Text = "Glasac uspjesno unesen";
                 }
                 catch(Exception eks)
                 {
@@ -101,8 +102,9 @@ namespace SistemZaElektronskoGlasanje
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            Greska.Text = "";
             try
-            {
+            {                
                 if(bLKarta.Text=="")
                 {
                     bGreska.Text = "Unesite broj lične karte za brisanje";
@@ -116,7 +118,7 @@ namespace SistemZaElektronskoGlasanje
                 Glasac g = izbori.DajGlasaca(bLKarta.Text);
                 izbori.ObrisiGlasaca(g);
                 bLKarta.Text = "";
-                bGreska.Text = "";
+                bGreska.Text = "Glasac uspjesno obrisan";
             }
             catch(Exception eks)
             {
