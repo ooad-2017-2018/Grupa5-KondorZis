@@ -30,6 +30,7 @@ namespace SistemZaElektronskoGlasanje
             izbori.DodajClana(new ClanKomisije("Damad", "Butkovic", 1234567890123, "password", ClanKomisije.Ovlastenja.Upravljanje));
             izbori.DodajGMjesto(new GlasackoMjesto("Staro Hrasno"));
             izbori.DodajGLasaca(new Glasac("Damad", "Butkovic", 1709997170027, "123456789", "Sarajevo"), new GlasackoMjesto("Staro Hrasno"));
+            izbori.DodajGLasaca(new Glasac("Kenan", "Karahodzic", 1171234124424, "234567890", "Sarajevo"), new GlasackoMjesto("Staro Hrasno"));
             this.InitializeComponent();
         }
 
