@@ -1,31 +1,96 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Login glasača";
 }
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+        form {
+            border: 3px solid #f1f1f1;
+        }
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 14px;
+            margin: 0 0;
+            border: none;
+            cursor: pointer;
+            width: 95%;
+        }
+
+            button:hover {
+                opacity: 0.8;
+            }
+
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+        }
+
+        img.avatar {
+            width: 40%;
+            border-radius: 50%;
+        }
+
+        .container {
+            padding: 26px;
+        }
+
+        .cancelcontainer {
+            padding: 26px;
+            width: 100%;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 160px;
+        }
+    </style>
+</head>
+<body>
+    <br/>
+
+    <h2>Login glasača</h2>
+
+    <form action>
+
+        <div class="container">
+            <label for="uname"><b>Broj lične karte</b></label>
+            <input type="text" placeholder="Unesite broj licne karte" name="uname" required>
+            <br />
+            <label for="psw">  <b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspŠifra</b></label>
+            <input type="password" placeholder="Unesite šifru" name="psw" required>
+            @using (Html.BeginForm("fadfadfa","Home",FormMethod.Post))
+            {
+
+                <button type="submit">
+                    Login
+                </button>
+            }
+        </div>
+
+        <div class="cancelcontainer" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Izlaz</button>
+        </div>
+    </form>
+
+</body>

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemZaElektronskoGlasanjeASP", "SistemZaElektronskoGlasanjeASP\SistemZaElektronskoGlasanjeASP.csproj", "{BE8A78D3-3AE0-4514-982F-CED77B8F1A9D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemZaElektronskoGlasanjeASP", "SistemZaElektronskoGlasanjeASP\SistemZaElektronskoGlasanjeASP.csproj", "{60773AB3-0691-4ED1-A558-CB1E20CE7F7A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BE8A78D3-3AE0-4514-982F-CED77B8F1A9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BE8A78D3-3AE0-4514-982F-CED77B8F1A9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BE8A78D3-3AE0-4514-982F-CED77B8F1A9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BE8A78D3-3AE0-4514-982F-CED77B8F1A9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60773AB3-0691-4ED1-A558-CB1E20CE7F7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60773AB3-0691-4ED1-A558-CB1E20CE7F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60773AB3-0691-4ED1-A558-CB1E20CE7F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60773AB3-0691-4ED1-A558-CB1E20CE7F7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {4B32D565-CA9A-4C6E-98F4-5A6E6FED6C6A}
+		SolutionGuid = {2DF0E5E3-657B-42D7-BB1E-02246CF69AB8}
 	EndGlobalSection
 EndGlobal
