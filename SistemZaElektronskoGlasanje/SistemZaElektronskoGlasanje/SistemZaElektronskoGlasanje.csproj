@@ -98,21 +98,30 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ClanKomisije.cs" />
-    <Compile Include="Glasac.cs" />
-    <Compile Include="GlasackiListic.cs" />
-    <Compile Include="GlasackoMjesto.cs" />
+    <Compile Include="Klase\ClanKomisije.cs" />
+    <Compile Include="Klase\Glasac.cs" />
+    <Compile Include="Klase\GlasackiListic.cs" />
+    <Compile Include="Klase\GlasackoMjesto.cs" />
     <Compile Include="GlasanjeViseKandidata.xaml.cs">
       <DependentUpon>GlasanjeViseKandidata.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Izbori.cs" />
-    <Compile Include="Kandidat.cs" />
+    <Compile Include="Klase\Izbori.cs" />
+    <Compile Include="Klase\Kandidat.cs" />
     <Compile Include="LogIn.xaml.cs">
       <DependentUpon>LogIn.xaml</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Nacionalnost.cs" />
     <Compile Include="NezavisnaLista.cs" />
     <Compile Include="Ovlastenja.cs" />
+=======
+    <Compile Include="Klase\Nacionalnost.cs" />
+    <Compile Include="Klase\NezavisnaLista.cs" />
+    <Compile Include="Klase\Ovlastenja.cs" />
+    <Compile Include="PassGenZaGlasaca.xaml.cs">
+      <DependentUpon>PassGenZaGlasaca.xaml</DependentUpon>
+    </Compile>
+>>>>>>> 96437dc78dca46fe5bee618ea1015eaaf87a0009
     <Compile Include="PredajaListica.xaml.cs">
       <DependentUpon>PredajaListica.xaml</DependentUpon>
     </Compile>
@@ -120,8 +129,8 @@
       <DependentUpon>GlasanjeJedanKandidat.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PSubjekat.cs" />
-    <Compile Include="Stranka.cs" />
+    <Compile Include="Klase\PSubjekat.cs" />
+    <Compile Include="Klase\Stranka.cs" />
     <Compile Include="UpravljanjeGlasacima.xaml.cs">
       <DependentUpon>UpravljanjeGlasacima.xaml</DependentUpon>
     </Compile>
