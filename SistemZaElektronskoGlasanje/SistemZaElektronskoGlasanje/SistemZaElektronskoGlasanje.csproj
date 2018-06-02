@@ -110,18 +110,15 @@
     <Compile Include="LogIn.xaml.cs">
       <DependentUpon>LogIn.xaml</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Nacionalnost.cs" />
     <Compile Include="NezavisnaLista.cs" />
     <Compile Include="Ovlastenja.cs" />
-=======
     <Compile Include="Klase\Nacionalnost.cs" />
     <Compile Include="Klase\NezavisnaLista.cs" />
     <Compile Include="Klase\Ovlastenja.cs" />
     <Compile Include="PassGenZaGlasaca.xaml.cs">
       <DependentUpon>PassGenZaGlasaca.xaml</DependentUpon>
     </Compile>
->>>>>>> 96437dc78dca46fe5bee618ea1015eaaf87a0009
     <Compile Include="PredajaListica.xaml.cs">
       <DependentUpon>PredajaListica.xaml</DependentUpon>
     </Compile>
