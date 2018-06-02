@@ -81,24 +81,5 @@ namespace SistemZaElektronskoGlasanje
                 }
             }
         }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                if (bIme.Text == "")
-                    bGreska.Text = "UNESITE IME SUBJEKTA ZA BRISANJE";
-                else
-                {
-                    izbori.IzbrisiSubjekta(bIme.Text);
-                    bGreska.Text = "";
-                    bIme.Text = "";
-                }
-            }
-            catch(Exception eks)
-            {
-                bGreska.Text = eks.Message;
-            }
-        }
     }
 }

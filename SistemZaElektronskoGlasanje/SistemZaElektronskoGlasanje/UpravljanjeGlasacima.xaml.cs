@@ -43,26 +43,25 @@ namespace SistemZaElektronskoGlasanje
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Int64 jmb;
-            bGreska.Text = "";
-            if (Ime.Text =="")
+            if(Ime.Text =="")
             {
                 Greska.Text = "UNESITE IME";
             }
             else if(Prezime.Text=="")
             {
-                Greska.Text = "UNESITE PREZIME";
+                Greska.Text = "UNESTIE PREZIME";
             }
             else if(Jmbg.Text=="")
             {
-                Greska.Text = "UNESITE JMBG";
+                Greska.Text = "UNESTIE JMBG";
             }
             else if (MStanovnja.Text == "")
             {
-                Greska.Text = "UNESITE MJESTO STANOVANJA";
+                Greska.Text = "UNESTIE MJESTO STANOVANJA";
             }
             else if (LKarta.Text == "")
             {
-                Greska.Text = "UNESITE BROJ LIČNE KARTE";
+                Greska.Text = "UNESTIE BROJ LIČNE KARTE";
             }
             else if(LKarta.Text.Length!=9)
             {
@@ -91,38 +90,12 @@ namespace SistemZaElektronskoGlasanje
                     LKarta.Text = "";
                     Jmbg.Text = "";
                     MStanovnja.Text = "";
-                    Greska.Text = "Glasac uspjesno unesen";
+                    Greska.Text = "";
                 }
                 catch(Exception eks)
                 {
                     Greska.Text = eks.Message;
                 }
-            }
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            Greska.Text = "";
-            try
-            {                
-                if(bLKarta.Text=="")
-                {
-                    bGreska.Text = "Unesite broj lične karte za brisanje";
-                    return;
-                }
-                if(bLKarta.Text.Count()!=9)
-                {
-                    bGreska.Text = "Neispravan broj lične karte";
-                    return;
-                }
-                Glasac g = izbori.DajGlasaca(bLKarta.Text);
-                izbori.ObrisiGlasaca(g);
-                bLKarta.Text = "";
-                bGreska.Text = "Glasac uspjesno obrisan";
-            }
-            catch(Exception eks)
-            {
-                bGreska.Text = eks.Message;
             }
         }
     }

@@ -29,7 +29,6 @@ namespace SistemZaElektronskoGlasanje
             izbori.DodajClana(new ClanKomisije("Kenan","Karahodzic",2502998170039,"password",ClanKomisije.Ovlastenja.Nadgledanje));
             izbori.DodajClana(new ClanKomisije("Damad", "Butkovic", 1234567890123, "password", ClanKomisije.Ovlastenja.Upravljanje));
             izbori.DodajGMjesto(new GlasackoMjesto("Staro Hrasno"));
-            izbori.DodajGLasaca(new Glasac("Damad", "Butkovic", 1709997170027, "123456789", "Sarajevo"), new GlasackoMjesto("Staro Hrasno"));
             this.InitializeComponent();
         }
 
@@ -43,8 +42,7 @@ namespace SistemZaElektronskoGlasanje
                 else
                 {
                     if (korisnik.Ovlasti == ClanKomisije.Ovlastenja.Nadgledanje)
-                    { 
-                        this.Frame.Navigate(typeof(PassGenZaGlasaca), izbori); //passgen
+                    { //this.Frame.Navigate(typeof()); passgen
                     }
                     else
                         this.Frame.Navigate(typeof(AdminForma), izbori);
