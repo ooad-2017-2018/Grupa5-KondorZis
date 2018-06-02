@@ -70,16 +70,14 @@
     <br/>
 
     <h2>Login glasača</h2>
-
-    <form action>
-
+    <form name="login" action="About" method="post">
         <div class="container">
             <label for="uname"><b>Broj lične karte</b></label>
             <input type="text" placeholder="Unesite broj licne karte" name="uname" required>
             <br />
             <label for="psw">  <b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspŠifra</b></label>
             <input type="password" placeholder="Unesite šifru" name="psw" required>
-            @using (Html.BeginForm("fadfadfa","Home",FormMethod.Post))
+            @using (Html.BeginForm("Home", "Contact", FormMethod.Post))
             {
 
                 <button type="submit">
@@ -91,6 +89,7 @@
         <div class="cancelcontainer" style="background-color:#f1f1f1">
             <button type="button" class="cancelbtn">Izlaz</button>
         </div>
+        <input type="submit" value="Submit" />
     </form>
 
 </body>

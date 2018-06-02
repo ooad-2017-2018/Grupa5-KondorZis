@@ -14,19 +14,14 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Microsoft.WindowsAzure.MobileServices;
 
 namespace SistemZaElektronskoGlasanje
-{   /// <summary>
+{
+    /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
     /// </summary>
     sealed partial class App : Application
     {
-
-        // This MobileServiceClient has been configured to communicate with the Azure Mobile Service and
-        // Azure Gateway using the application url. You're all set to start working with your Mobile Service!
-        public static Microsoft.WindowsAzure.MobileServices.MobileServiceClient OOAD_Grupa5_KondorZisClient = new Microsoft.WindowsAzure.MobileServices.MobileServiceClient(
-        "https://ooad-grupa5-kondorzis.azurewebsites.net");
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
