@@ -84,26 +84,14 @@ namespace SistemZaElektronskoGlasanje
                 if (g.Jmbg == glasac.Jmbg)
                 {
                     Glasaci.Remove(glasac);
-                    foreach(GlasackoMjesto gm in GMjesta)
-                    {
-                        foreach(Glasac gl in gm.ListaRegGlasaca)
-                        {
-                            if (gl.Jmbg == g.Jmbg)
-                            {
-                                gm.ListaRegGlasaca.Remove(gl);
-                                return;
-                            }
-                        }
-                    }
                     return;
                 }
-            throw new Exception("Nema glasača u sistemu");
         }
 
-        public Glasac DajGlasaca(string lkarta)
+        public Glasac DajGlasaca(Int64 jmbg)
         {
             foreach (Glasac glasac in glasaci)
-                if (lkarta == glasac.BrLicneKarte)
+                if (jmbg == glasac.Jmbg)
                     return glasac;
             throw new Exception("Glasač nije u sistemu");
         }
@@ -219,7 +207,6 @@ namespace SistemZaElektronskoGlasanje
                     Subjekti.Remove(ps);
                     return;
                 }
-            throw new Exception("Subjekat nije u sistemu");
         }
     }
 }

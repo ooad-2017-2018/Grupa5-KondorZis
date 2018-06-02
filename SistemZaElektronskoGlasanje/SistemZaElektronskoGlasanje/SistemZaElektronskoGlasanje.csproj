@@ -113,9 +113,6 @@
     <Compile Include="Nacionalnost.cs" />
     <Compile Include="NezavisnaLista.cs" />
     <Compile Include="Ovlastenja.cs" />
-    <Compile Include="PassGenZaGlasaca.xaml.cs">
-      <DependentUpon>PassGenZaGlasaca.xaml</DependentUpon>
-    </Compile>
     <Compile Include="PredajaListica.xaml.cs">
       <DependentUpon>PredajaListica.xaml</DependentUpon>
     </Compile>
@@ -140,6 +137,7 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <None Include="ClassDiagram1.cd" />
+    <None Include="Connected Services\OOAD-Grupa5-KondorZisMobileApp\ConnectedService.json" />
     <None Include="SistemZaElektronskoGlasanje_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -170,10 +168,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="PassGenZaGlasaca.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="PredajaListica.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -196,9 +190,15 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Mobile.Client">
+      <Version>4.0.2</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.0.8</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
