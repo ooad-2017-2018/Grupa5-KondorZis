@@ -6,46 +6,48 @@ using System.Threading.Tasks;
 
 namespace SistemZaElektronskoGlasanje
 {
-    class Izbori
+    static class Izbori
     {
-        List<PSubjekat> subjekti;
-        List<Kandidat> kandidati;
-        List<Glasac> glasaci;
-        List<ClanKomisije> komisija;
-        List<GlasackoMjesto> gMjesta;
+        static List<PSubjekat> subjekti = new List<PSubjekat>();
+        static List<Kandidat> kandidati = new List<Kandidat>();
+        static List<Glasac> glasaci = new List<Glasac>();
+        static List<ClanKomisije> komisija = new List<ClanKomisije>();
+        static List<GlasackoMjesto> gMjesta= new List<GlasackoMjesto>();
 
-        public List<PSubjekat> Subjekti { get => subjekti; set => subjekti = value; }
-        public List<Kandidat> Kandidati { get => kandidati; set => kandidati = value; }
-        public List<Glasac> Glasaci { get => glasaci; set => glasaci = value; }
-        public List<ClanKomisije> Komisija { get => komisija; set => komisija = value; }
-        public List<GlasackoMjesto> GMjesta { get => gMjesta; set => gMjesta = value; }
+        public static List<PSubjekat> Subjekti { get => subjekti; set => subjekti = value; }
+        public static List<Kandidat> Kandidati { get => kandidati; set => kandidati = value; }
+        public static List<Glasac> Glasaci { get => glasaci; set => glasaci = value; }
+        public static List<ClanKomisije> Komisija { get => komisija; set => komisija = value; }
+        public static List<GlasackoMjesto> GMjesta { get => gMjesta; set => gMjesta = value; }
+        
 
-        public Izbori()
-        {
-            Subjekti = new List<PSubjekat>();
-            Kandidati = new List<Kandidat>();
-            Glasaci = new List<Glasac>();
-            Komisija = new List<ClanKomisije>();
-            GMjesta = new List<GlasackoMjesto>();
-        }
-
-        public void DodajGMjesto(GlasackoMjesto gm)
+        public static void DodajGMjesto(GlasackoMjesto gm)
         {
             foreach (GlasackoMjesto glasmj in GMjesta)
                 if (glasmj.LokacijaMjesta==gm.LokacijaMjesta) throw new Exception("Glasačko mjesto je već uneseno");
             GMjesta.Add(gm);
         }
+        public static void ObrisiGMjesto(string lokacija)
+        {
+            foreach (GlasackoMjesto clankom in GMjesta)
+                if (lokacija==clankom.LokacijaMjesta)
+                {
+                    GMjesta.Remove(clankom);
+                    return;
+                }
+        }
 
 
 
-        public void DodajClana(ClanKomisije ck)
+
+        public static void DodajClana(ClanKomisije ck)
         {
             foreach (ClanKomisije clankom in komisija)
-                if (ck.Jmbg == clankom.Jmbg) throw new Exception("Glasač je već unesen");
+                if (ck.Jmbg == clankom.Jmbg) throw new Exception("Clan je već unesen");
             Komisija.Add(ck);
         }
 
-        public void ObrisiClana(ClanKomisije ck)
+        public static void ObrisiClana(ClanKomisije ck)
         {
             foreach (ClanKomisije clankom in komisija)
                 if (ck.Jmbg == clankom.Jmbg)
@@ -55,7 +57,7 @@ namespace SistemZaElektronskoGlasanje
                 }
         }
 
-        public ClanKomisije DajClana(string username)
+        public static ClanKomisije DajClana(string username)
         {
             foreach (ClanKomisije clankom in komisija)
                 if (username == clankom.Username())
@@ -63,7 +65,7 @@ namespace SistemZaElektronskoGlasanje
             throw new Exception("Pogrešan username");
         }
 
-        public void DodajGLasaca(Glasac g,GlasackoMjesto gm)
+        public static void DodajGLasaca(Glasac g,GlasackoMjesto gm)
         {
             foreach (Glasac glasac in glasaci)
                 if (g.Jmbg == glasac.Jmbg) throw new Exception("Glasač je već unesen");
@@ -78,7 +80,7 @@ namespace SistemZaElektronskoGlasanje
             Glasaci.Add(g);
         }
 
-        public void ObrisiGlasaca(Glasac g)
+        public static void ObrisiGlasaca(Glasac g)
         {
             foreach (Glasac glasac in glasaci)
                 if (g.Jmbg == glasac.Jmbg)
@@ -100,7 +102,7 @@ namespace SistemZaElektronskoGlasanje
             throw new Exception("Nema glasača u sistemu");
         }
 
-        public Glasac DajGlasaca(string lkarta)
+        public static Glasac DajGlasaca(string lkarta)
         {
             foreach (Glasac glasac in glasaci)
                 if (lkarta == glasac.BrLicneKarte)
@@ -108,14 +110,14 @@ namespace SistemZaElektronskoGlasanje
             throw new Exception("Glasač nije u sistemu");
         }
 
-        public void DodajKandidata(string ime, string prezime, string mjesto_stanovanja, Int64 jmbg, Kandidat.Nacionalnost n)
+        public static void DodajKandidata(string ime, string prezime, string mjesto_stanovanja, Int64 jmbg, Kandidat.Nacionalnost n)
         {
             foreach (Kandidat k in Kandidati)
                 if (k.JMBG == jmbg) throw new Exception("Kandidat je već unesen");
             Kandidati.Add(new Kandidat(ime,prezime,mjesto_stanovanja,jmbg,n));
         }
 
-        public void IzbrisiKandidata(Int64 jmbg)
+        public static void IzbrisiKandidata(Int64 jmbg)
         {
             foreach (Kandidat k in Kandidati)
                 if (k.JMBG == jmbg)
@@ -125,21 +127,21 @@ namespace SistemZaElektronskoGlasanje
                 }
         }
 
-        public void DodajStranku(string imeSubjekta, string sjediste)
+        public static void DodajStranku(string imeSubjekta, string sjediste)
         {
             foreach (PSubjekat ps in Subjekti)
                 if (ps.ImeSubjekta==imeSubjekta) throw new Exception("Stranka je već unesena");
             Subjekti.Add(new Stranka(imeSubjekta,sjediste));
         }
 
-        public void DodajNListu(string imeSubjekta)
+        public static void DodajNListu(string imeSubjekta)
         {
             foreach (PSubjekat ps in Subjekti)
                 if (ps.ImeSubjekta == imeSubjekta) throw new Exception("Nezavisna lista je već unesena");
             Subjekti.Add(new NezavisnaLista(imeSubjekta));
         }
 
-        public Stranka DajStranku(string ime)
+        public static Stranka DajStranku(string ime)
         {
             foreach (PSubjekat ps in Subjekti)
                 if (ps.ImeSubjekta == ime)
@@ -149,7 +151,7 @@ namespace SistemZaElektronskoGlasanje
             throw new Exception(ime + " nije u sistemu.");
         }
 
-        public void DodajKandidataS(Kandidat k,string ime)
+        public static void DodajKandidataS(Kandidat k,string ime)
         {
             foreach (PSubjekat ps in Subjekti)
                 if (ps.ImeSubjekta == ime)
@@ -161,7 +163,7 @@ namespace SistemZaElektronskoGlasanje
             throw new Exception(ime + " nije u sistemu.");
         }
 
-        PSubjekat DajPSubjekta(string ime)
+        public static PSubjekat DajPSubjekta(string ime)
         {
             foreach(PSubjekat ps in Subjekti)
             {
@@ -170,7 +172,7 @@ namespace SistemZaElektronskoGlasanje
             throw new Exception("Politički subjekat nije u sistemu");
         }
 
-        public Kandidat DajKandidata(Int64 jmbg)
+        public static Kandidat DajKandidata(Int64 jmbg)
         {
             foreach (Kandidat k in Kandidati)
             {
@@ -179,12 +181,12 @@ namespace SistemZaElektronskoGlasanje
             throw new Exception("Kandidat nije u sistemu");
         }
 
-        public void PromjenaPredsjednika(Kandidat novi,Stranka s)
+        public static void PromjenaPredsjednika(Kandidat novi,Stranka s)
         {
             s.Predsjednik = novi;
         }
 
-        public void IzbaciClana(Kandidat k)
+        public static void IzbaciClana(Kandidat k)
         {
             foreach (PSubjekat ps in subjekti)
             {
@@ -201,7 +203,7 @@ namespace SistemZaElektronskoGlasanje
             }
         }
 
-        public NezavisnaLista DajNListu(string ime)
+        public static NezavisnaLista DajNListu(string ime)
         {
             foreach (PSubjekat ps in Subjekti)
                 if (ps.ImeSubjekta == ime)
@@ -211,7 +213,7 @@ namespace SistemZaElektronskoGlasanje
             throw new Exception(ime + " nije u sistemu.");
         }
 
-        public void IzbrisiSubjekta(string ime)
+        public static void IzbrisiSubjekta(string ime)
         {
             foreach (PSubjekat ps in Subjekti)
                 if (ps.ImeSubjekta == ime)

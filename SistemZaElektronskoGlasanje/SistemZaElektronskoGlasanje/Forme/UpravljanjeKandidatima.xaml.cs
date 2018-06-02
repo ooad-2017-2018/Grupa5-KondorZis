@@ -22,7 +22,6 @@ namespace SistemZaElektronskoGlasanje
     /// </summary>
     public sealed partial class UpravljanjeKandidatima : Page
     {
-        Izbori izbori;
         public UpravljanjeKandidatima()
         {
             Random b = new Random();
@@ -36,8 +35,7 @@ namespace SistemZaElektronskoGlasanje
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            izbori = (Izbori)e.Parameter;
-            foreach (PSubjekat ps in izbori.Subjekti)
+            foreach (PSubjekat ps in Izbori.Subjekti)
             {
                 Subjekat.Items.Add(ps);
             }
@@ -88,8 +86,8 @@ namespace SistemZaElektronskoGlasanje
                 try
                 {
                     Greska.Text = "";
-                    izbori.DodajKandidata(Ime.Text,Prezime.Text,MStanovanja.Text,jmb,(Nacionalnost.SelectedIndex==0 ? Kandidat.Nacionalnost.Bosnjak : Nacionalnost.SelectedIndex == 1 ? Kandidat.Nacionalnost.Hrvat : Nacionalnost.SelectedIndex==2 ? Kandidat.Nacionalnost.Srbin :Kandidat.Nacionalnost.Ostali));
-                    Kandidat k = izbori.DajKandidata(jmb);
+                    Izbori.DodajKandidata(Ime.Text,Prezime.Text,MStanovanja.Text,jmb,(Nacionalnost.SelectedIndex==0 ? Kandidat.Nacionalnost.Bosnjak : Nacionalnost.SelectedIndex == 1 ? Kandidat.Nacionalnost.Hrvat : Nacionalnost.SelectedIndex==2 ? Kandidat.Nacionalnost.Srbin :Kandidat.Nacionalnost.Ostali));
+                    Kandidat k = Izbori.DajKandidata(jmb);
                     if(Subjekat.SelectedItem is Stranka)
                     {
                         (Subjekat.SelectedItem as Stranka).DodajKandidata(k);
@@ -128,9 +126,9 @@ namespace SistemZaElektronskoGlasanje
             {
                 try
                 {
-                    Kandidat brisanje = izbori.DajKandidata(jmb);
-                    izbori.IzbaciClana(brisanje);
-                    izbori.IzbrisiKandidata(jmb);
+                    Kandidat brisanje = Izbori.DajKandidata(jmb);
+                    Izbori.IzbaciClana(brisanje);
+                    Izbori.IzbrisiKandidata(jmb);
                 }
                 catch(Exception eks)
                 {

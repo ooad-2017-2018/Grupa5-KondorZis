@@ -23,16 +23,10 @@ namespace SistemZaElektronskoGlasanje
     public sealed partial class UpravljanjePSubjektima : Page
     {
         bool a;
-        Izbori izbori;
         public UpravljanjePSubjektima()
         {
             this.InitializeComponent();
             a = false;
-        }
-
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            izbori = (Izbori)e.Parameter;
         }
 
         private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
@@ -68,9 +62,9 @@ namespace SistemZaElektronskoGlasanje
                 try
                 {
                     if (strankarb.IsChecked == true)
-                        izbori.DodajStranku(Ime.Text, Sjediste.Text);
+                       Izbori.DodajStranku(Ime.Text, Sjediste.Text);
                     else
-                        izbori.DodajNListu(Ime.Text);
+                        Izbori.DodajNListu(Ime.Text);
                     Ime.Text = "";
                     Sjediste.Text = "";
                     Greska.Text = "";

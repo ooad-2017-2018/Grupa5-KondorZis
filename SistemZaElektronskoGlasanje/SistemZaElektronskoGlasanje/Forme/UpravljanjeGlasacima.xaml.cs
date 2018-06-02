@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Input;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -22,7 +24,6 @@ namespace SistemZaElektronskoGlasanje
     /// </summary>
     public sealed partial class UpravljanjeGlasacima : Page
     {
-        Izbori izbori;
         public UpravljanjeGlasacima()
         {
             this.InitializeComponent();
@@ -30,8 +31,7 @@ namespace SistemZaElektronskoGlasanje
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            izbori = (Izbori)e.Parameter;
-            foreach (GlasackoMjesto gm in izbori.GMjesta)
+            foreach (GlasackoMjesto gm in Izbori.GMjesta)
                 Mjesto.Items.Add(gm);
         }
 
@@ -84,7 +84,7 @@ namespace SistemZaElektronskoGlasanje
                 try
                 {
                     Glasac novi = new Glasac(Ime.Text,Prezime.Text,jmb,LKarta.Text,MStanovnja.Text);
-                    izbori.DodajGLasaca(novi,Mjesto.SelectedItem as GlasackoMjesto);
+                    Izbori.DodajGLasaca(novi,Mjesto.SelectedItem as GlasackoMjesto);
                     Ime.Text = "";
                     Prezime.Text = "";
                     LKarta.Text = "";
@@ -98,5 +98,31 @@ namespace SistemZaElektronskoGlasanje
                 }
             }
         }
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Greska.Text = "";
+            try
+            {
+                if (bLKarta.Text == "")
+                {
+                    bGreska.Text = "Unesite broj lične karte za brisanje";
+                    return;
+                }
+                if (bLKarta.Text.Count() != 9)
+                {
+                    bGreska.Text = "Neispravan broj lične karte";
+                    return;
+                }
+                Glasac g = Izbori.DajGlasaca(bLKarta.Text);
+                Izbori.ObrisiGlasaca(g);
+                bLKarta.Text = "";
+                bGreska.Text = "Glasac uspjesno obrisan";
+            }
+            catch (Exception eks)
+            {
+                bGreska.Text = eks.Message;
+            }
+        }
     }
+    
 }

@@ -11,9 +11,9 @@
         <Button Content="Upravljanje političkim subjektima" HorizontalAlignment="Left" Margin="106,125,0,0" VerticalAlignment="Top" Click="Button_Click"/>
         <Button Content="Upravaljanje kandidatima" HorizontalAlignment="Left" Margin="106,187,0,0" VerticalAlignment="Top" Width="239" Click="Button_Click_1"/>
         <Button Content="Upravaljanje glasačima" HorizontalAlignment="Left" Margin="106,247,0,0" VerticalAlignment="Top" Width="239" Click="Button_Click_2"/>
-        <Button Content="Upravljanje glasačkim mjestima" HorizontalAlignment="Left" Margin="106,304,0,0" VerticalAlignment="Top" Width="239"/>
+        <Button Content="Upravljanje glasačkim mjestima" HorizontalAlignment="Left" Margin="106,304,0,0" VerticalAlignment="Top" Width="239" Click="Button_Click_4"/>
         <Button Content="Upravaljanje članovima komisijie" HorizontalAlignment="Left" Margin="106,361,0,0" VerticalAlignment="Top" Width="239"/>
-        <TextBlock HorizontalAlignment="Left" Margin="65,49,0,0" Text="Dobro došao, " TextWrapping="Wrap" VerticalAlignment="Top" Width="212"/>
+        <TextBlock HorizontalAlignment="Left" Margin="65,49,0,0" Text="Dobro došao, " TextWrapping="Wrap" VerticalAlignment="Top" Width="212" Name="imeiprezime"/>
         <Button Content="Izlaz" HorizontalAlignment="Left" Margin="343,521,0,0" VerticalAlignment="Top" Click="Button_Click_3"/>
     </Grid>
 </Page>

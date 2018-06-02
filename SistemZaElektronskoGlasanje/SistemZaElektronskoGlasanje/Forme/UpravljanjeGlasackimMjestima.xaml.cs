@@ -21,38 +21,50 @@ namespace SistemZaElektronskoGlasanje
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     ///
-    public sealed partial class AdminForma : Page
+    public sealed partial class UpravljanjeGlasackimMjestima : Page
     {
-        Izbori izbori;
-        public AdminForma()
+        public UpravljanjeGlasackimMjestima()
         {
             this.InitializeComponent();
         }
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            izbori = (Izbori)e.Parameter;
-
-        }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(UpravljanjePSubjektima),izbori);
+            this.Frame.GoBack();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(UpravljanjeKandidatima), izbori);
+            if (Ime.Text == "")
+                Greska.Text = "UNESITE LOKACIJU GLASAČKOG MJESTA";
+            else
+                try
+                {
+                    Izbori.DodajGMjesto(new GlasackoMjesto(Ime.Text));
+                    Greska.Text = "";
+                    Ime.Text = "";
+                }
+                catch(Exception eks)
+                {
+                    Greska.Text = eks.Message;
+                }
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(UpravljanjeGlasacima), izbori);
-        }
-
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-            this.Frame.GoBack();
+            if (Brisanje.Text == "")
+               bGreska.Text = "UNESITE LOKACIJU GLASAČKOG MJESTA";
+            else
+                try
+                {
+                    Izbori.ObrisiGMjesto(Brisanje.Text);
+                    bGreska.Text = "";
+                    Brisanje.Text = "";
+                }
+                catch (Exception eks)
+                {
+                    bGreska.Text = eks.Message;
+                }
         }
     }
 }

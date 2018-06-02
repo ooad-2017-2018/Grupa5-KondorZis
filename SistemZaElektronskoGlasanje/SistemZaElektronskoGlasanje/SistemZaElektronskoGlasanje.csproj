@@ -92,43 +92,49 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="AdminForma.xaml.cs">
+    <Compile Include="Forme\AdminForma.xaml.cs">
       <DependentUpon>AdminForma.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ClanKomisije.cs" />
-    <Compile Include="Glasac.cs" />
-    <Compile Include="GlasackiListic.cs" />
-    <Compile Include="GlasackoMjesto.cs" />
-    <Compile Include="GlasanjeViseKandidata.xaml.cs">
+    <Compile Include="Forme\PassGenZaGlasaca.xaml.cs">
+      <DependentUpon>PassGenZaGlasaca.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\UpravljanjeGlasackimMjestima.xaml.cs">
+      <DependentUpon>UpravljanjeGlasackimMjestima.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Klase\ClanKomisije.cs" />
+    <Compile Include="Klase\Glasac.cs" />
+    <Compile Include="Klase\GlasackiListic.cs" />
+    <Compile Include="Klase\GlasackoMjesto.cs" />
+    <Compile Include="Forme\GlasanjeViseKandidata.xaml.cs">
       <DependentUpon>GlasanjeViseKandidata.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Izbori.cs" />
-    <Compile Include="Kandidat.cs" />
-    <Compile Include="LogIn.xaml.cs">
+    <Compile Include="Klase\Izbori.cs" />
+    <Compile Include="Klase\Kandidat.cs" />
+    <Compile Include="Forme\LogIn.xaml.cs">
       <DependentUpon>LogIn.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Nacionalnost.cs" />
-    <Compile Include="NezavisnaLista.cs" />
-    <Compile Include="Ovlastenja.cs" />
+    <Compile Include="Klase\Nacionalnost.cs" />
+    <Compile Include="Klase\NezavisnaLista.cs" />
+    <Compile Include="Klase\Ovlastenja.cs" />
     <Compile Include="PredajaListica.xaml.cs">
       <DependentUpon>PredajaListica.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GlasanjeJedanKandidat.xaml.cs">
+    <Compile Include="Forme\GlasanjeJedanKandidat.xaml.cs">
       <DependentUpon>GlasanjeJedanKandidat.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PSubjekat.cs" />
-    <Compile Include="Stranka.cs" />
-    <Compile Include="UpravljanjeGlasacima.xaml.cs">
+    <Compile Include="Klase\PSubjekat.cs" />
+    <Compile Include="Klase\Stranka.cs" />
+    <Compile Include="Forme\UpravljanjeGlasacima.xaml.cs">
       <DependentUpon>UpravljanjeGlasacima.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UpravljanjeKandidatima.xaml.cs">
+    <Compile Include="Forme\UpravljanjeKandidatima.xaml.cs">
       <DependentUpon>UpravljanjeKandidatima.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UpravljanjePSubjektima.xaml.cs">
+    <Compile Include="Forme\UpravljanjePSubjektima.xaml.cs">
       <DependentUpon>UpravljanjePSubjektima.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -138,11 +144,9 @@
     </AppxManifest>
     <None Include="ClassDiagram1.cd" />
     <None Include="Connected Services\OOAD-Grupa5-KondorZisMobileApp\ConnectedService.json" />
-    <None Include="SistemZaElektronskoGlasanje_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\GRB.png" />
-    <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
     <Content Include="Assets\Square150x150Logo.scale-200.png" />
@@ -150,21 +154,30 @@
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="AdminForma.xaml">
+    <Page Include="Forme\AdminForma.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="GlasanjeViseKandidata.xaml">
+    <Page Include="Forme\DodavanjeClanova.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forme\GlasanjeViseKandidata.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="LogIn.xaml">
+    <Page Include="Forme\LogIn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forme\PassGenZaGlasaca.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -172,19 +185,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="GlasanjeJedanKandidat.xaml">
+    <Page Include="Forme\GlasanjeJedanKandidat.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UpravljanjeGlasacima.xaml">
+    <Page Include="Forme\UpravljanjeGlasacima.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UpravljanjeKandidatima.xaml">
+    <Page Include="Forme\UpravljanjeGlasackimMjestima.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UpravljanjePSubjektima.xaml">
+    <Page Include="Forme\UpravljanjeKandidatima.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forme\UpravljanjePSubjektima.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
