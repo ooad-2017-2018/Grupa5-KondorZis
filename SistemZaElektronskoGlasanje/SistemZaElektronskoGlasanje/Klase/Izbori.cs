@@ -47,12 +47,12 @@ namespace SistemZaElektronskoGlasanje
             Komisija.Add(ck);
         }
 
-        public static void ObrisiClana(ClanKomisije ck)
+        public static void ObrisiClana(Int64 jmb)
         {
             foreach (ClanKomisije clankom in komisija)
-                if (ck.Jmbg == clankom.Jmbg)
+                if (jmb == clankom.Jmbg)
                 {
-                    Komisija.Remove(ck);
+                    Komisija.Remove(clankom);
                     return;
                 }
         }

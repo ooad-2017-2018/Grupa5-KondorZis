@@ -9,6 +9,35 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="52,48,0,0" Text="Dodavanje člana komisije" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="Nazad" HorizontalAlignment="Left" Margin="92,370,0,0" VerticalAlignment="Top" Click="Button_Click" UseLayoutRounding="False" d:LayoutRounding="Auto"/>
+        <Button Content="Prihvati" HorizontalAlignment="Left" Margin="406,370,0,0" VerticalAlignment="Top" Click="Button_Click_1" UseLayoutRounding="False" d:LayoutRounding="Auto" RenderTransformOrigin="0.476,0.266"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52,95,0,0" Text="Ime:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Name="Ime" HorizontalAlignment="Left" Margin="194,95,0,0" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.571,0.25" Width="282"/>
+        <TextBlock HorizontalAlignment="Left" Margin="51,152,0,0" Text="Prezime:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Name="Prezime" HorizontalAlignment="Left" Margin="196,146,0,0" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.571,0.25" Width="282"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52,209,0,0" Text="JMBG:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Name="Jmbg" HorizontalAlignment="Left" Margin="194,203,0,0" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.571,0.25" Width="282"/>
+        <Button Content="Obriši" HorizontalAlignment="Left" Margin="913,187,0,0" VerticalAlignment="Top" Click="Button_Click_2" RenderTransformOrigin="0.669,0.672"/>
+        <TextBlock HorizontalAlignment="Left" Margin="51,449,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="424" Name="Greska" Foreground="Red" RenderTransformOrigin="0.5,0.5">
+        </TextBlock>
+        <TextBlock Name="bGreska" Foreground="Red" HorizontalAlignment="Left" Margin="560,248,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="443"/>
+        <Canvas HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="349" Margin="92,264,0,0">
+            <RadioButton Content="Upravljanje" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.704,0.078" IsChecked="True" Name="up"/>
+            <RadioButton Content="Nadgledanje" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="229"/>
+
+        </Canvas>
+        <TextBlock HorizontalAlignment="Left" Margin="12,307,0,0" Text="Administratorski password:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Name="apass" HorizontalAlignment="Left" Margin="196,301,0,0" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.571,0.25" Width="282"/>
+        <TextBlock HorizontalAlignment="Left" Margin="524,146,0,0" Text="Administratorski password:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="apass_br" HorizontalAlignment="Left" Margin="708,140,0,0" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.571,0.25" Width="282"/>
+        <TextBlock HorizontalAlignment="Left" Margin="580,242,0,0" Text="Promjena passworda" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="576,295,0,0" Text="Novi password:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="passnovi" HorizontalAlignment="Left" Margin="708,289,0,0" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.571,0.25" Width="282"/>
+        <TextBlock HorizontalAlignment="Left" Margin="560,48,0,0" Text="Brisanje člana komisije" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="586,101,0,0" Text="JMBG za brisanje:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="bLKarta" HorizontalAlignment="Left" Margin="708,95,0,0" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.571,0.25" Width="282"/>
+        <Button Content="Prihvati" HorizontalAlignment="Left" Margin="902,354,0,0" VerticalAlignment="Top" Click="Button_Click_3"/>
 
     </Grid>
 </Page>

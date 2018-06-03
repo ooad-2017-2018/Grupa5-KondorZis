@@ -98,6 +98,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Forme\DodavanjeClanova.xaml.cs">
+      <DependentUpon>DodavanjeClanova.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Forme\PassGenZaGlasaca.xaml.cs">
       <DependentUpon>PassGenZaGlasaca.xaml</DependentUpon>
     </Compile>

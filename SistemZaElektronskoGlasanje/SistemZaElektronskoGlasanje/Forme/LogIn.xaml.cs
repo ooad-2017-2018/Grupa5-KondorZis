@@ -40,7 +40,10 @@ namespace SistemZaElektronskoGlasanje
             {
                 ClanKomisije korisnik = Izbori.DajClana(User.Text);
                 if (korisnik.Password != Pass.Password)
+                {
                     Greska.Text = "Pogrešan password";
+                    Pass.Password = "";
+                }
                 else
                 {
                     if (korisnik.Ovlasti == ClanKomisije.Ovlastenja.Nadgledanje)

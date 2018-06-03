@@ -23,13 +23,14 @@ namespace SistemZaElektronskoGlasanje
     ///
     public sealed partial class AdminForma : Page
     {
+        ClanKomisije ck;
         public AdminForma()
         {
             this.InitializeComponent();
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            ClanKomisije ck=(ClanKomisije)e.Parameter;
+            ck=(ClanKomisije)e.Parameter;
             imeiprezime.Text += ck.Ime + " " + ck.Prezime;
         }
 
@@ -56,6 +57,11 @@ namespace SistemZaElektronskoGlasanje
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(UpravljanjeGlasackimMjestima));
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(DodavanjeClanova),ck);
         }
     }
 }
