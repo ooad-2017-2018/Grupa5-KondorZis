@@ -8,8 +8,13 @@ namespace SistemZaElektronskoGlasanje
 {
     class GlasackiListic
     {
-        public GlasackiListic() {
-            throw new NotImplementedException();
+        List<StavkaListica> izbor;
+
+        public GlasackiListic(List<StavkaListica> izbor)
+        {
+            Izbor = izbor;
         }
+
+        public List<StavkaListica> Izbor { get => izbor; set => izbor = value; }
     }
 }

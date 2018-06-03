@@ -122,6 +122,8 @@
     <Compile Include="Klase\Nacionalnost.cs" />
     <Compile Include="Klase\NezavisnaLista.cs" />
     <Compile Include="Klase\Ovlastenja.cs" />
+    <Compile Include="Klase\StavkaListica.cs" />
+    <Compile Include="Klase\Utrka.cs" />
     <Compile Include="PredajaListica.xaml.cs">
       <DependentUpon>PredajaListica.xaml</DependentUpon>
     </Compile>
