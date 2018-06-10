@@ -16,6 +16,10 @@ namespace SistemZaElektronskoGlasanjeASP.Models
         public DbSet<ClanKomisije> ClanKomisije { get; set; }
         public DbSet<Glasac> Glasac { get; set; }
         public DbSet<PSubjekat> PSubjekat { get; set; }
+        public DbSet<GlasackiListic> GlasackiListic { get; set; }
+        public DbSet<GlasackoMjesto> GlasackoMjesto { get; set; }
+        public DbSet<StavkaListica> StavkaListica { get; set; }
+        public DbSet<Utrka> Utrka { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();

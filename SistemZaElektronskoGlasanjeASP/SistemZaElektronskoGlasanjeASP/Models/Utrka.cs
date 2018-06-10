@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace SistemZaElektronskoGlasanjeASP.Models
 {
-    class Utrka
+    public class Utrka
     {
         string naziv;
         List<GlasackoMjesto> mjestaZaUtrku;
@@ -20,7 +22,7 @@ namespace SistemZaElektronskoGlasanjeASP.Models
             Kandidati = new List<Kandidat>();
             Subjekti = new List<PSubjekat>();
         }
-
+        [Key]
         public string Naziv { get => naziv; set => naziv = value; }
         public List<GlasackoMjesto> MjestaZaUtrku { get => mjestaZaUtrku; set => mjestaZaUtrku = value; }
         public List<Kandidat> Kandidati { get => kandidati; set => kandidati = value; }

@@ -154,6 +154,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\GlasacsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -161,6 +162,10 @@
     <Compile Include="Migrations\201806101820014_Initial.cs" />
     <Compile Include="Migrations\201806101820014_Initial.Designer.cs">
       <DependentUpon>201806101820014_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806102227460_Druga.cs" />
+    <Compile Include="Migrations\201806102227460_Druga.Designer.cs">
+      <DependentUpon>201806102227460_Druga.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BazaContext.cs" />
@@ -218,6 +223,11 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Glasacs\Create.cshtml" />
+    <Content Include="Views\Glasacs\Delete.cshtml" />
+    <Content Include="Views\Glasacs\Details.cshtml" />
+    <Content Include="Views\Glasacs\Edit.cshtml" />
+    <Content Include="Views\Glasacs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -238,6 +248,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201806101820014_Initial.resx">
       <DependentUpon>201806101820014_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806102227460_Druga.resx">
+      <DependentUpon>201806102227460_Druga.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

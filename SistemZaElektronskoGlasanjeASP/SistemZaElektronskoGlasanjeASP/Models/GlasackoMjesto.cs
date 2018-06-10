@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace SistemZaElektronskoGlasanjeASP.Models
 {
-    class GlasackoMjesto
+    public class GlasackoMjesto
     {
         private String lokacijaMjesta;
         private List<Glasac> listaRegGlasaca;
@@ -14,7 +16,7 @@ namespace SistemZaElektronskoGlasanjeASP.Models
         private List<GlasackiListic> predatiGlasList;
         private static TimeSpan vrijemeIzmedjuAutoPredaje = new TimeSpan(1, 0, 0);
         private TimeSpan vrijemeProslePredaje;
-
+        [Key]
         public string LokacijaMjesta { get => lokacijaMjesta; set => lokacijaMjesta = value; }
         public List<Glasac> ListaRegGlasaca { get => listaRegGlasaca; set => listaRegGlasaca = value; }
 
