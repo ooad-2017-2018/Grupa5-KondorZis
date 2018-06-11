@@ -154,8 +154,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\GlasackiListicsController.cs" />
+    <Compile Include="Controllers\GlasackoMjestoesController.cs" />
     <Compile Include="Controllers\GlasacsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KandidatsController.cs" />
+    <Compile Include="Controllers\PSubjekatsController.cs" />
+    <Compile Include="Controllers\UtrkasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -228,6 +233,31 @@
     <Content Include="Views\Glasacs\Details.cshtml" />
     <Content Include="Views\Glasacs\Edit.cshtml" />
     <Content Include="Views\Glasacs\Index.cshtml" />
+    <Content Include="Views\PSubjekats\Create.cshtml" />
+    <Content Include="Views\PSubjekats\Delete.cshtml" />
+    <Content Include="Views\PSubjekats\Details.cshtml" />
+    <Content Include="Views\PSubjekats\Edit.cshtml" />
+    <Content Include="Views\PSubjekats\Index.cshtml" />
+    <Content Include="Views\Kandidats\Create.cshtml" />
+    <Content Include="Views\Kandidats\Delete.cshtml" />
+    <Content Include="Views\Kandidats\Details.cshtml" />
+    <Content Include="Views\Kandidats\Edit.cshtml" />
+    <Content Include="Views\Kandidats\Index.cshtml" />
+    <Content Include="Views\Utrkas\Create.cshtml" />
+    <Content Include="Views\Utrkas\Delete.cshtml" />
+    <Content Include="Views\Utrkas\Details.cshtml" />
+    <Content Include="Views\Utrkas\Edit.cshtml" />
+    <Content Include="Views\Utrkas\Index.cshtml" />
+    <Content Include="Views\GlasackiListics\Create.cshtml" />
+    <Content Include="Views\GlasackiListics\Delete.cshtml" />
+    <Content Include="Views\GlasackiListics\Details.cshtml" />
+    <Content Include="Views\GlasackiListics\Edit.cshtml" />
+    <Content Include="Views\GlasackiListics\Index.cshtml" />
+    <Content Include="Views\GlasackoMjestoes\Create.cshtml" />
+    <Content Include="Views\GlasackoMjestoes\Delete.cshtml" />
+    <Content Include="Views\GlasackoMjestoes\Details.cshtml" />
+    <Content Include="Views\GlasackoMjestoes\Edit.cshtml" />
+    <Content Include="Views\GlasackoMjestoes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
