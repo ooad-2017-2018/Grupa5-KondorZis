@@ -8,6 +8,8 @@ namespace SistemZaElektronskoGlasanje
 {
     class Glasac
     {
+        private const long gornjaGranicaJMBG = 1000000000000;
+        private const long donjaGranicaJMBG = 9999999999999;
         private String ime;
         private String prezime;
         private Int64 jmbg;
@@ -17,7 +19,7 @@ namespace SistemZaElektronskoGlasanje
 
         public string Ime { get => ime; set => ime = value; }
         public string Prezime { get => prezime; set => prezime = value; }
-        public long Jmbg { get => jmbg; set => jmbg = (value < 1000000000000 || value > 9999999999999) ? throw new Exception("Pogrešan JMBG") : value; }
+        public long Jmbg { get => jmbg; set => jmbg = (value < gornjaGranicaJMBG || value > donjaGranicaJMBG) ? throw new Exception("Pogrešan JMBG") : value; }
         public string BrLicneKarte { get => brLicneKarte; set => brLicneKarte = value; }
         public string MjestoStanovanja { get => mjestoStanovanja; set => mjestoStanovanja = value; }
         

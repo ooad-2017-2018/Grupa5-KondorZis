@@ -27,6 +27,7 @@ namespace SistemZaElektronskoGlasanje
                 if (glasmj.LokacijaMjesta==gm.LokacijaMjesta) throw new Exception("Glasačko mjesto je već uneseno");
             GMjesta.Add(gm);
         }
+
         public static void ObrisiGMjesto(string lokacija)
         {
             foreach (GlasackoMjesto clankom in GMjesta)
@@ -65,19 +66,19 @@ namespace SistemZaElektronskoGlasanje
             throw new Exception("Pogrešan username");
         }
 
-        public static void DodajGLasaca(Glasac g,GlasackoMjesto gm)
+        public static void DodajGLasaca(Glasac noviGlasac,GlasackoMjesto glasackoMjestoGlasaca)
         {
             foreach (Glasac glasac in glasaci)
-                if (g.Jmbg == glasac.Jmbg) throw new Exception("Glasač je već unesen");
-            foreach (GlasackoMjesto glasmj in GMjesta)
-                if (glasmj.LokacijaMjesta == gm.LokacijaMjesta)
+                if (noviGlasac.Jmbg == glasac.Jmbg) throw new Exception("Glasač je već unesen");
+            foreach (GlasackoMjesto glasackoMjesto in GMjesta)
+                if (glasackoMjesto.LokacijaMjesta == glasackoMjestoGlasaca.LokacijaMjesta)
                 {
-                    gm.DodajNovogGlasaca(g);
+                    glasackoMjestoGlasaca.DodajNovogGlasaca(noviGlasac);
                     goto nastavak;
                 }
             throw new Exception("Glasačko mjesto je ne postoji");
             nastavak:
-            Glasaci.Add(g);
+            Glasaci.Add(noviGlasac);
         }
 
         public static void ObrisiGlasaca(Glasac g)

@@ -86,7 +86,24 @@ namespace SistemZaElektronskoGlasanje
                 try
                 {
                     Greska.Text = "";
-                    Izbori.DodajKandidata(Ime.Text,Prezime.Text,MStanovanja.Text,jmb,(Nacionalnost.SelectedIndex==0 ? Kandidat.Nacionalnost.Bosnjak : Nacionalnost.SelectedIndex == 1 ? Kandidat.Nacionalnost.Hrvat : Nacionalnost.SelectedIndex==2 ? Kandidat.Nacionalnost.Srbin :Kandidat.Nacionalnost.Ostali));
+                    Kandidat.Nacionalnost kn=new Kandidat.Nacionalnost();
+                    switch(Nacionalnost.SelectedIndex)
+                    {
+                        case 0:
+                            kn = Kandidat.Nacionalnost.Bosnjak;
+                            break;
+                        case 1:
+                            kn = Kandidat.Nacionalnost.Hrvat;
+                            break;
+                        case 2:
+                            kn = Kandidat.Nacionalnost.Srbin;
+                            break;
+                        case 3:
+                            kn = Kandidat.Nacionalnost.Ostali;
+                            break;
+                    }
+
+                    Izbori.DodajKandidata(Ime.Text,Prezime.Text,MStanovanja.Text,jmb,kn);
                     Kandidat k = Izbori.DajKandidata(jmb);
                     if(Subjekat.SelectedItem is Stranka)
                     {
